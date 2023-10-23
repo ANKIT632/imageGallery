@@ -1,0 +1,12 @@
+.cardx {
+    padding: 1rem;
+    
+
+  }
+
+  .card-conatiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  }

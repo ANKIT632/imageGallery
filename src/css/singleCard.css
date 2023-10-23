@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.singleCardContainer{
+  /* place-self: flex-start; */
+  width: 21rem;
+  
+}
+.bar {
+    
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .left {    
+ display: flex;
+
+}
+  
+  .innerLeft {
+    padding-left: 30px;
+  }
+  
+  .innerLeft p{
+    margin-bottom: 0rem;
+  }
+
+  .right {
+   display: flex;
+   
+   
+align-items: center
+  }

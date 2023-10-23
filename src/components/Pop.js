@@ -5,40 +5,32 @@ import Col from 'react-bootstrap/Col';
 import { AiOutlineLike } from 'react-icons/ai';
 import '../css/singleCard.css';
 import { useSelector } from 'react-redux';
-import { memo, useState } from 'react';
-import Pop from './Pop';
+
 import { useDispatch } from 'react-redux';
 
-function SingleCard(props) {
+function POP(props) {
 const {
 name,
 likes,
 tag,
 img,
-url
+url,
+setShow,
 
 }=props;
 
-const[show,setShow]=useState(false);
 const val=useSelector((state)=>state.showPop);
  const dispatch=useDispatch()
 const update=()=>{
-  if(val===0){
-  setShow(true);
-  dispatch({type:"GetPOP",payload:1})
+  if(val===1){
+    setShow(false);
+  dispatch({type:"GetPOP",payload:0})
   }
 }
 
 const mode=useSelector((state)=>state.mode);
   return (
     <>
-    {show && <Pop   name={name}
-            likes={likes}
-            tag={tag}
-            img={img}
-            url={url }
-            setShow={setShow}
- />}
     <Card className='singleCardContainer'   style={mode ?  { backgroundColor: "white", color: "black" }:{ backgroundColor: "black", color: "white"  }}  onClick={update}>
       <Card.Img variant="top" src={url} />
       <Card.Body>
@@ -64,7 +56,5 @@ const mode=useSelector((state)=>state.mode);
     </>
 
   );
-}
-
-export default memo(SingleCard);
-
+  }
+  export default POP;

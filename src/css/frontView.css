@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.containerX {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    background-image: url('../image/img1.jpg');
+    background-size: cover;
+    background-position: center bottom 26%;
+    color: #fff;
+}
+
+.containerX input {
+    width: 600px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+/* Add a media query for screens with a max-width of 768px */
+@media (max-width: 768px) {
+    .containerX input {
+        width: 300px; /* Adjust the width for smaller screens */
+      
+       
+    }
+    .containerX input::placeholder {
+     
+        content: "Text for Smaller Screens"; /* Change the text content for the placeholder */
+    }
+}
