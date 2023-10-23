@@ -2,6 +2,7 @@ const intialize ={
   data:[],
   mode:true,
   showPop:0,
+  backblur:false,
 
 }
 export default function reducer(state=intialize,action){

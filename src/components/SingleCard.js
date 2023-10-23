@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { AiOutlineLike } from 'react-icons/ai';
 import '../css/singleCard.css';
 import { useSelector } from 'react-redux';
-import { memo, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import Pop from './Pop';
 import { useDispatch } from 'react-redux';
 
@@ -19,15 +19,31 @@ url
 
 }=props;
 
+
+
 const[show,setShow]=useState(false);
 const val=useSelector((state)=>state.showPop);
  const dispatch=useDispatch()
+ const [clicked, setClicked] = useState(false);
 const update=()=>{
   if(val===0){
   setShow(true);
   dispatch({type:"GetPOP",payload:1})
+
   }
+ 
+
+  
+
 }
+useEffect(()=>{
+  if(val===1){
+    setClicked(true);
+  }
+  else{
+    setClicked(false);
+  }
+},[val])
 
 const mode=useSelector((state)=>state.mode);
   return (
@@ -38,15 +54,16 @@ const mode=useSelector((state)=>state.mode);
             img={img}
             url={url }
             setShow={setShow}
+            setClicked={setClicked}
  />}
-    <Card className='singleCardContainer'   style={mode ?  { backgroundColor: "white", color: "black" }:{ backgroundColor: "black", color: "white"  }}  onClick={update}>
+    <Card className={`singleCardContainer${clicked ? 'Click' : ''}`}   style={mode ?  { backgroundColor: "white", color: "black"  }:{ backgroundColor: "black", color: "white"  }}  onClick={update}>
       <Card.Img variant="top" src={url} />
       <Card.Body>
        
       <div class="bar" >
         <div class="left">
         <Col xs={1} md={20}>
-          <Image src={img} roundedCircle />
+          <Image src={img} roundedCircle  />
         </Col>
             <div className='innerLeft'>
               <p>{name}</p>
@@ -55,7 +72,7 @@ const mode=useSelector((state)=>state.mode);
         </div>
         
         <div class="right" >
-        <AiOutlineLike/>
+        <AiOutlineLike />
         <p>{likes >= 1000 ? `${(likes / 1000).toFixed(1)}k` : likes}</p> 
         </div>
       </div> 

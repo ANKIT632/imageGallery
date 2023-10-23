@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const key = process.env.REACT_APP_API_KEY;
+
 console.log(key);
 export const getData = () => async (dispatch) => {
   try {
@@ -25,12 +26,12 @@ export const searchUpdateDate = (val) => async (dispatch) => {
       );
       dispatch({ type: 'SEARCH_DATA_SUCCESS', payload: response.data.results  });
       
-    } else {
-      getData();
+    } 
+    else {
+      dispatch(getData());
     }
   } catch (error) {
     console.log(error);
   }
 };
-
 

@@ -26,7 +26,7 @@ import '../css/card.css';
     <div className='card-conatiner'  >
     {
         data.map((ele)=>{return(
-            <div className='cardx' key={ele.id} style={{display:""}} > 
+            <span className='cardx' key={ele.id}> 
             <SingleCard 
             name={ele.user.name ? ele.user.name:"Unknown"}
             likes={ele?.likes? ele.likes:0}
@@ -36,7 +36,7 @@ import '../css/card.css';
 
 
              />
-            </div>
+            </span>
         )})
         }
     
