@@ -25,18 +25,18 @@ import '../css/card.css';
     
     <div className='card-conatiner'  >
     {
-        data.map((ele)=>{return(
-            <span className='cardx' key={ele.id}> 
+        data.map((ele,index)=>{return(
+            <section className='cardx' key={ele.id}> 
             <SingleCard 
-            name={ele.user.name ? ele.user.name:"Unknown"}
-            likes={ele?.likes? ele.likes:0}
-            tag={ele?.user?.social?.instagram_username?ele?.user?.social?.instagram_username:"none"}
-            img={ele?.user?.profile_image?.small? ele?.user.profile_image?.small:""}
-            url={ele?.urls?.small ?ele?.urls?.small:"" }
-
-
+            name={ele?.user?.name}
+            likes={ele?.likes}
+            social={ele?.user?.social}
+            img={ele?.user?.profile_image?.small}
+            url={ele?.urls }
+            key={index}
+            downloadUrl={ele?.urls?.full}
              />
-            </span>
+            </section>
         )})
         }
     

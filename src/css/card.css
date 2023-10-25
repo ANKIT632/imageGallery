@@ -1,12 +1,21 @@
 .cardx {
-    padding: 1rem;
-    
-
+  break-inside: avoid-column;
+   padding-bottom: 1rem;
   }
 
   .card-conatiner{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    padding: 1rem;
+    columns: 3;
+    
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
   
+  
+  }
+
+  @media (max-width: 1200px) {
+    .card-container {
+    padding: 1rem;
+      columns: 3;
+    }
   }

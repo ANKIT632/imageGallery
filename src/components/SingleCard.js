@@ -13,9 +13,10 @@ function SingleCard(props) {
 const {
 name,
 likes,
-tag,
+social,
 img,
-url
+url,
+downloadUrl,
 
 }=props;
 
@@ -50,28 +51,30 @@ const mode=useSelector((state)=>state.mode);
     <>
     {show && <Pop   name={name}
             likes={likes}
-            tag={tag}
+            social={social}
             img={img}
             url={url }
             setShow={setShow}
             setClicked={setClicked}
+            downloadUrl={downloadUrl}
+            
  />}
     <Card className={`singleCardContainer${clicked ? 'Click' : ''}`}   style={mode ?  { backgroundColor: "white", color: "black"  }:{ backgroundColor: "black", color: "white"  }}  onClick={update}>
-      <Card.Img variant="top" src={url} />
+      <Card.Img variant="top" src={url?.small} />
       <Card.Body>
        
-      <div class="bar" >
-        <div class="left">
+      <div className="bar" >
+        <div className="left">
         <Col xs={1} md={20}>
           <Image src={img} roundedCircle  />
         </Col>
             <div className='innerLeft'>
               <p>{name}</p>
-              <p style={{color:"gray"}}>@{tag}</p>
+             <p style={{color:"gray"}}>{social?.instagram_username && "@"+social?.instagram_username}</p>
             </div>
         </div>
         
-        <div class="right" >
+        <div className="right" >
         <AiOutlineLike />
         <p>{likes >= 1000 ? `${(likes / 1000).toFixed(1)}k` : likes}</p> 
         </div>

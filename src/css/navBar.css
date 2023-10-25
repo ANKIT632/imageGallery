@@ -1,1 +1,48 @@
 /* styles.css */
+#navSearch{
+
+    background-color: #efefef;
+    background-repeat: no-repeat;
+    
+}
+
+#navSearchActive{    
+    background-color: rgb(117, 115, 115);
+}
+
+.NavSearchClass::placeholder{
+   color: rgba(157, 157, 157, 0.92);
+}
+
+.NavSearchClass{
+    font: Montserrat;
+    background-image: url(../image/search.png);
+    width: 419px;
+    height: 43px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-position: 5px center;
+    padding-left:34px;
+    background-size: 23px;
+    background-repeat: no-repeat;
+    
+    font-size: small;
+}
+.NavEl{
+    color: rgb(29, 28, 28);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 43px;
+    padding-left: 21px;
+}
+
+.NavTittle{
+    font-family: pattaya;
+    text-decoration: none;
+    line-height: 43px;
+    padding-right: 3rem;
+    font-size: 30px;
+}
+

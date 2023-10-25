@@ -7,6 +7,7 @@ import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import { useSelector } from 'react-redux';
 import '../css/navBar.css';
+import {Link} from 'react-router-dom';
 
 
 function BasicExample() {
@@ -25,18 +26,20 @@ function BasicExample() {
         
         <Navbar 
             expand="lg"
-            style={mode ?  { backgroundColor: "white", color: "#1d1c1c" }:{ backgroundColor: "#1d1c1c", color: "white"}} >
+            style={mode ?  { backgroundColor: "white", color: "#1d1c1c" }:{ backgroundColor: "#1d1c1c", color: "white"}}  sticky='top'>
             <Container >
-                <Navbar.Brand href="#home" style={mode?{ color: "#1d1c1c" }:{ color: "white" }}>Image Gallery</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Link to='/' className="NavTittle" style={mode?{ color: "#1d1c1c" }:{ color: "white" }}>Image Gallery</Link>       
+                
+                      <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Form className="d-flex">
-                            <input type='text' placeholder='Search Image Here' onChange={update} className="form-control"  style={mode ?  { backgroundColor: "white", color: "#1d1c1c" }:{ backgroundColor: "#1d1c1c", color: "white"}}  />
+
+                            <input id={ mode?"navSearch":"navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onChange={update}  />
                         </Form>
-                        <Nav.Link href="#home" style={mode?{ color: "#1d1c1c" }:{ color: "white" }}>Explore</Nav.Link>
-                        <Nav.Link href="#link" style={mode?{ color: "#1d1c1c"}:{ color: "white" }}>Collection</Nav.Link>
-                        <Nav.Link href="#link" style={mode?{ color: "#1d1c1c"}:{ color: "white" }}>Community</Nav.Link>
+                        <Link to='/Explore' className='NavEl' style={mode?{ color: "#1d1c1c" }:{ color: "white" }}>Explore</Link>
+                        <Link to="/link" className='NavEl' style={mode?{ color: "#1d1c1c"}:{ color: "white" }}>Collection</Link>
+                        <Link to="/link" className='NavEl' style={mode?{ color: "#1d1c1c"}:{ color: "white" }}>Community</Link>
                     </Nav>
                     <Form.Check
                         type="switch"
