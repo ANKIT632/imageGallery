@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import '../css/card.css';
 
 
+
  function Card() {
   
   const dispatch = useDispatch();
@@ -23,10 +24,11 @@ import '../css/card.css';
   if(data.length>0){
   return (
     
-    <div className='card-conatiner'  >
+    
+    <div className='container-no-margin m-auto card-conatiner text-center'  >
     {
         data.map((ele,index)=>{return(
-            <section className='cardx' key={ele.id}> 
+            <div className='cardx' key={ele.id}> 
             <SingleCard 
             name={ele?.user?.name}
             likes={ele?.likes}
@@ -36,11 +38,12 @@ import '../css/card.css';
             key={index}
             downloadUrl={ele?.urls?.full}
              />
-            </section>
+            </div>
         )})
         }
     
     </div>
+  
   );}
   else{
     return(

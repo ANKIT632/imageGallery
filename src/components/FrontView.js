@@ -4,9 +4,9 @@ export default function FrontView() {
   return (
     <div className='containerX'>
 
-      <h3>Download High Quality Images by Creators</h3>
-      <p>over 2.4 milion+ stock Images by our talented community</p>
-      <input  className="ip" type='text' placeholder='Search high resolution image' />
+      <h3 id="FrontHead">Download High Quality Images by creators</h3>
+      <p id='frontp'>Over 2.4 million+ stock Images by our talented community</p> 
+      <input id="FrontSearchBar" type='text' placeholder='Search high resolution Images, categories, wallpapers' />
 
     </div>
   )

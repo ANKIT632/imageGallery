@@ -43,6 +43,30 @@
     text-decoration: none;
     line-height: 43px;
     padding-right: 3rem;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 400;
 }
 
+#NavBar{
+    height: 80px;
+}
+
+
+#NavDiv{
+    display: flex;
+    align-items: center;
+ 
+    justify-content: center;
+    position: fixed;
+    left: 93px;
+}
+
+.NavcheckBox{
+    color: rgb(29, 28, 28);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+   align-items: center;
+ 
+ 
+}

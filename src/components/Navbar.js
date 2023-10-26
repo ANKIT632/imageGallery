@@ -26,6 +26,7 @@ function BasicExample() {
         
         <Navbar 
             expand="lg"
+            id='NavBar'
             style={mode ?  { backgroundColor: "white", color: "#1d1c1c" }:{ backgroundColor: "#1d1c1c", color: "white"}}  sticky='top'>
             <Container >
                 <Link to='/' className="NavTittle" style={mode?{ color: "#1d1c1c" }:{ color: "white" }}>Image Gallery</Link>       
@@ -41,11 +42,16 @@ function BasicExample() {
                         <Link to="/link" className='NavEl' style={mode?{ color: "#1d1c1c"}:{ color: "white" }}>Collection</Link>
                         <Link to="/link" className='NavEl' style={mode?{ color: "#1d1c1c"}:{ color: "white" }}>Community</Link>
                     </Nav>
+                    
                     <Form.Check
+                    reverse="true"
+                   
                         type="switch"
-                        id="custom-switch"
-                        label="Mode"
+                        className="NavcheckBox"
+                        label={mode?"Dark Mode":"Light Mode"}
                         onClick={toggleMode}
+                        style={mode?{ color: "#1d1c1c" }:{ color: "white" }}
+                        
                     />
                 </Navbar.Collapse>
             </Container>

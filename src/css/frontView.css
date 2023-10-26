@@ -15,21 +15,48 @@
     color: #fff;
 }
 
-.containerX input {
-    width: 600px;
-    height: 40px;
+#FrontSearchBar {
+    font: Montserrat;
+    background-image: url(../image/search.png);
+    width: 808px;
+    height: 50px;
+    border: none;
+    outline: none;
     border-radius: 6px;
+    background-position: 5px center;
+    padding-left:34px;
+    background-size: 23px;
+    background-repeat: no-repeat;
+    font-weight: 500;
+    font-size: 14px;
+    color: #C4C4C4;
 }
 
 /* Add a media query for screens with a max-width of 768px */
 @media (max-width: 768px) {
-    .containerX input {
+    #FrontSearchBar {
         width: 300px; /* Adjust the width for smaller screens */
       
        
     }
-    .containerX input::placeholder {
+    #FrontSearchBar::placeholder {
      
         content: "Text for Smaller Screens"; /* Change the text content for the placeholder */
     }
+}
+
+
+#frontp{
+    font: Montserrat;
+    font-weight: 500;
+    height: 14px;
+    color: #f1f0f0;
+
+}
+
+#FrontHead{
+    font: Montserrat;
+    font-weight: 700;
+    height: 32px;
+    color: #ffffff;
 }
