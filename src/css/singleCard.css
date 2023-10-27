@@ -26,6 +26,7 @@
   
   .innerLeft p{
     margin-bottom: 0rem;
+    display: flex
   }
 
   .right p{
@@ -41,19 +42,7 @@ align-items: center
   }
 
 
-#pop {
-  background-color: white;
-  /* Set the position to fixed to center it on the screen */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Set the z-index to a high value to ensure it's on top of other elements */
-  z-index: 9999;
-  height: auto;
 
-  
-  }
 
   .singleCardContainerClick{
     cursor: default;
@@ -62,15 +51,4 @@ align-items: center
   width: 21rem;
   }
 
-  #popImg{
-    width: 46rem;
-    height: 384px;
-  }
-
-
-  #popBtn{
-    width: 11rem;
-    top: 27rem;
-    right: 1rem;
-    position: fixed;
-  }
+ 

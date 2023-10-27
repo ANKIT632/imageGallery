@@ -30,7 +30,7 @@ import '../css/card.css';
         data.map((ele,index)=>{return(
             <div className='cardx' key={ele.id}> 
             <SingleCard 
-            name={ele?.user?.name}
+            name={ele?.user?.name.trim()}
             likes={ele?.likes}
             social={ele?.user?.social}
             img={ele?.user?.profile_image?.small}

@@ -28,7 +28,7 @@ function BasicExample() {
             expand="lg"
             id='NavBar'
             style={mode ?  { backgroundColor: "white", color: "#1d1c1c" }:{ backgroundColor: "#1d1c1c", color: "white"}}  sticky='top'>
-            <Container >
+            <Container id='NavCon'>
                 <Link to='/' className="NavTittle" style={mode?{ color: "#1d1c1c" }:{ color: "white" }}>Image Gallery</Link>       
                 
                       <Navbar.Toggle aria-controls="basic-navbar-nav" />

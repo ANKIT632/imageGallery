@@ -1,0 +1,69 @@
+#pop {
+    background-color: white;
+    /* Set the position to fixed to center it on the screen */
+    position: fixed;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Set the z-index to a high value to ensure it's on top of other elements */
+    z-index: 9999;
+    height: auto;
+  
+    
+    }
+
+    #popImg{
+        width: 46rem;
+        height: 384px;
+      }
+    
+    
+      #popBtn{
+        width: 11rem;
+        top: 21rem;
+        right: 1rem;
+        position: fixed;
+      }
+
+      .Popbar {
+    
+        display: flex;
+        justify-content: space-between;
+    
+      }
+      .Popleft {    
+     display: flex;
+     align-items: center;
+    
+    }
+      
+      .PopinnerLeft {
+       margin-left: 15px;
+      }
+      
+      .PopinnerLeft p{
+        margin-bottom: 0rem;
+        
+        display: flex;
+        width: 160%  ;
+      }
+    
+      .Popright p{
+        margin-bottom: 0rem;
+      }
+      
+    
+      .Popright {
+       display: flex;
+       
+       
+    align-items: center
+      }
+    
+      #popIcon{
+        display: inline-flex;
+        align-items: center;
+        margin-left: 18px;
+    }
+        
+    

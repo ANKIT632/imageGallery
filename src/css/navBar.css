@@ -67,6 +67,26 @@
     font-weight: 700;
     text-decoration: none;
    align-items: center;
+   line-height: 23px;
  
  
 }
+
+@media (max-width: 1199px) {
+    .NavSearchClass {
+        width: 345px; 
+    }
+
+    #NavBar{
+        height: 80px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    
+
+    #NavCont{
+      display: contents;
+    }
+       
+    }
+    

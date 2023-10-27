@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import { useDispatch } from 'react-redux';
 import CloseButton from 'react-bootstrap/CloseButton';
-
+import '../css/pop.css'
 
 function POP(props) {
 const {
@@ -64,23 +64,26 @@ const mode=useSelector((state)=>state.mode);
       <Button id='popBtn' variant="success" onClick={handleDownloadClick} > download Image</Button>
       <Card.Body>
      
-      <div className="bar" >
-        <div className="left">
+      <div className="Popbar">
+        <div className="Popleft">
         <Col xs={1} md={20}>
           <Image  src={img} roundedCircle />
         </Col>
-            <div className='innerLeft'>
+            <div className='PopinnerLeft'>
               <p>{name}</p>
               <p style={{color:"gray"}}>{social?.instagram_username &&social?.instagram_username}</p>
             </div>
+
+            <div id='popIcon'>
             {social?.instagram_username &&  <AiOutlineInstagram/> }
             {social?.instagram_username && "/"+social?.instagram_username}
-            
+            {"  "}
             {social?.twitter_username &&  <CiTwitter/>}
             {social?.twitter_username && "/"+social?.twitter_username}
+            </div>
         </div>
         
-        <div className="right" >
+        <div className="popright" >
         <AiOutlineLike/>
         <p>{likes >= 1000 ? `${(likes / 1000).toFixed(1)}k` : likes}</p> 
         </div>

@@ -3,6 +3,7 @@
     padding: 0;
 
 }
+
 .containerX {
     display: flex;
     flex-direction: column;
@@ -16,7 +17,6 @@
 }
 
 #FrontSearchBar {
-    font: Montserrat;
     background-image: url(../image/search.png);
     width: 808px;
     height: 50px;
@@ -33,21 +33,27 @@
 }
 
 /* Add a media query for screens with a max-width of 768px */
-@media (max-width: 768px) {
+@media (max-width: 868px) {
     #FrontSearchBar {
-        width: 300px; /* Adjust the width for smaller screens */
+        width: 500px; /* Adjust the width for smaller screens */
       
        
     }
-    #FrontSearchBar::placeholder {
-     
-        content: "Text for Smaller Screens"; /* Change the text content for the placeholder */
-    }
+  
 }
 
 
+@media (max-width: 668px) {
+    #FrontSearchBar {
+        width: 400px; /* Adjust the width for smaller screens */
+      
+       
+    }
+
+}
+
 #frontp{
-    font: Montserrat;
+ 
     font-weight: 500;
     height: 14px;
     color: #f1f0f0;
@@ -55,8 +61,42 @@
 }
 
 #FrontHead{
-    font: Montserrat;
+ 
     font-weight: 700;
     height: 32px;
     color: #ffffff;
+    
 }
+
+@media (max-width: 526px) {
+
+    #FrontSearchBar {
+        width: 325px; /* Adjust the width for smaller screens */
+      
+       
+    }
+    .containerX {
+
+        grid-gap: 25px;
+
+    }
+    #frontp{
+ 
+        font-weight: 500;
+        height: 10px;
+        color: #f1f0f0;
+        text-align: center;
+        width: 18rem;
+    
+    }
+
+    #FrontHead{
+ 
+        font-weight: 700;
+        height: 30px;
+        color: #ffffff;
+        font-size: 24px;
+        text-align: center;
+        width: 20rem;
+    }
+  }
