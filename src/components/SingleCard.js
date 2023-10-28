@@ -69,14 +69,14 @@ const mode=useSelector((state)=>state.mode);
           <Image src={img} roundedCircle  />
         </Col>
             <div className='innerLeft'>
-              <p>{name}</p>
-             <p style={{color:"gray"}}>{social?.instagram_username && "@"+social?.instagram_username}</p>
+              <p className='cardName'>{name}</p>
+             <p className='NameHandler' style={{color:"gray"}}>{social?.instagram_username && "@"+social?.instagram_username}</p>
             </div>
         </div>
         
         <div className="right" >
         <AiOutlineLike />
-        <p>{likes >= 1000 ? `${(likes / 1000).toFixed(1)}k` : likes}</p> 
+        <p className='likeP'>{likes >= 1000 ? `${(likes / 1000).toFixed(1)}k` : likes}</p> 
         </div>
       </div> 
       </Card.Body>

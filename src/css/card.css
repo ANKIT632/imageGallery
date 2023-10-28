@@ -6,6 +6,7 @@
   .card-conatiner{
     padding: 1rem;
     columns: 4;
+    overflow: hidden;
   
   }
 

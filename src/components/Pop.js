@@ -59,7 +59,8 @@ const mode=useSelector((state)=>state.mode);
     <>
           
     <Card  id='pop'  style={mode ?  { backgroundColor: "white", color: "black" }:{ backgroundColor: "black", color: "white" }} >
-    <CloseButton style={{position:"fixed", left:"45rem", backgroundColor:"white", borderRadius:"50%" ,top: "-7px"}} onClick={update}/>
+    
+    <CloseButton id='closeIcon'  onClick={update}/>
       <Card.Img id='popImg' variant="top" src={url.regular} />
       <Button id='popBtn' variant="success" onClick={handleDownloadClick} > download Image</Button>
       <Card.Body>
@@ -67,25 +68,27 @@ const mode=useSelector((state)=>state.mode);
       <div className="Popbar">
         <div className="Popleft">
         <Col xs={1} md={20}>
-          <Image  src={img} roundedCircle />
+          <Image id='Profileimg' src={img} roundedCircle />
         </Col>
+        <div id='popDiv'>
             <div className='PopinnerLeft'>
-              <p>{name}</p>
-              <p style={{color:"gray"}}>{social?.instagram_username &&social?.instagram_username}</p>
+              <p className='cardName'>{name}</p>
+              <p className='NameHandler' style={{color:"gray"}}>{social?.instagram_username && "@"+social?.instagram_username}</p>
             </div>
 
-            <div id='popIcon'>
-            {social?.instagram_username &&  <AiOutlineInstagram/> }
+            <div id='popIcon' className='NameHandler'>
+            {social?.instagram_username &&  <AiOutlineInstagram /> }
             {social?.instagram_username && "/"+social?.instagram_username}
-            {"  "}
-            {social?.twitter_username &&  <CiTwitter/>}
+         
+            {social?.twitter_username &&  <CiTwitter style={{marginLeft:"6px"}}/>}
             {social?.twitter_username && "/"+social?.twitter_username}
             </div>
+        </div>
         </div>
         
         <div className="popright" >
         <AiOutlineLike/>
-        <p>{likes >= 1000 ? `${(likes / 1000).toFixed(1)}k` : likes}</p> 
+        <p className='likeP'>{likes >= 1000 ? `${(likes / 1000).toFixed(1)}k` : likes}</p> 
         </div>
       </div> 
       </Card.Body>

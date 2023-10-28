@@ -50,5 +50,23 @@ align-items: center
   filter: blur(5px);
   width: 21rem;
   }
+  .cardName{
+    font-family: cursive;
+    font-weight: 700;
+    font-size: 13.00px;
+}
+
+.NameHandler{
+  font-family: poppins;
+  font-weight: 550;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.likeP{
+  font-family: Montserrat;
+  font-weight: 700;
+  font-size: 13.63px;
+}
 
  

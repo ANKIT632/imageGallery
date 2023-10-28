@@ -16,6 +16,7 @@
     color: #fff;
 }
 
+
 #FrontSearchBar {
     background-image: url(../image/search.png);
     width: 808px;
@@ -29,7 +30,7 @@
     background-repeat: no-repeat;
     font-weight: 500;
     font-size: 14px;
-    color: #C4C4C4;
+  
 }
 
 /* Add a media query for screens with a max-width of 768px */

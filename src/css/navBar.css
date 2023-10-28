@@ -48,7 +48,8 @@
 }
 
 #NavBar{
-    height: 80px;
+    
+        height: 80px;
 }
 
 
@@ -83,6 +84,7 @@
         padding-right: 8px;
     }
     
+  
 
     #NavCont{
       display: contents;

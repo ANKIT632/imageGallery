@@ -18,7 +18,7 @@ export const getData = () => async (dispatch) => {
 
 // Update the action/action.js file
 
-export const searchUpdateDate = (val) => async (dispatch) => {
+export const searchUpdateData = (val) => async (dispatch) => {
   try {
     if (val.trim() !== "") {
       const response = await axios.get(
