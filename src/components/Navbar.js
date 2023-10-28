@@ -33,7 +33,7 @@ function NAVBAR() {
 
              
                 <Navbar.Toggle aria-controls="basic-navbar-nav" style={{background:"white"}} />
-                <Navbar.Collapse id="basic-navbar-nav" style={mode ? { backgroundColor: "white", color: "#1d1c1c" } : { backgroundColor: "#1d1c1c", color: "white" }}>
+                <Navbar.Collapse id="basic-navbar-nav" style={mode ? { backgroundColor: "white",width:"0px", color: "#1d1c1c" } : { backgroundColor: "#1d1c1c", color: "white",width:"0px"}}>
                     <Nav className="me-auto">
                         <Form className="d-flex">
 
