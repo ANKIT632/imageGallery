@@ -4,6 +4,7 @@ import { getData } from '../action/action';
 import { useDispatch, useSelector } from 'react-redux';
 
 import '../css/card.css';
+import Load from './Load';
 
 
 
@@ -21,7 +22,7 @@ import '../css/card.css';
   },[data])
  
 
-  if(data.length>0){
+  if(data.length>11){
   return (
     
     
@@ -48,7 +49,7 @@ import '../css/card.css';
   else{
     return(
       <>
-        { "loading...."}
+       <Load/>
       </>
     )
   }
