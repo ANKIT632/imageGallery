@@ -22,7 +22,7 @@ import Load from './Load';
   },[data])
  
 
-  if(data.length>11){
+  if(data.length>0){
   return (
     
     
