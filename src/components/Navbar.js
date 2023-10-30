@@ -16,6 +16,7 @@ function NAVBAR() {
 
     const update = (e) => {
         dispatch(searchUpdateData(e.target.value));
+        dispatch({type:'setSearchVal',payload: e.target.value});
     }
 
     const toggleMode = () => {
@@ -40,8 +41,8 @@ function NAVBAR() {
                             <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onChange={update} />
                         </Form>
                         <Link to='/Explore' className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Explore</Link>
-                        <Link to="/link" className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Collection</Link>
-                        <Link to="/link" className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Community</Link>
+                        <Link to="/Collection" className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Collection</Link>
+                        <Link to="/Community" className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Community</Link>
                     </Nav>
 
                     <Form.Check

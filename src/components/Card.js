@@ -15,16 +15,17 @@ import Load from './Load';
 
   
   useEffect(() => {
-    dispatch(getData());
+    dispatch(getData(""));
   },[dispatch]); 
 
   useEffect(()=>{
+    
   },[data])
  
 
   if(data.length>0){
   return (
-    
+    <>
     
     <div className='container-no-margin m-auto card-conatiner text-center'  >
     {
@@ -44,6 +45,8 @@ import Load from './Load';
         }
     
     </div>
+    <button className='btnStyle cardBtn'>Load More</button>
+    </>
   
   );}
   else{
