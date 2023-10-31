@@ -51,7 +51,7 @@ align-items: center
   width: 21rem;
   }
   .cardName{
-    font-family: cursive;
+    font-family: 'circular';
     font-weight: 700;
     font-size: 13.00px;
 }

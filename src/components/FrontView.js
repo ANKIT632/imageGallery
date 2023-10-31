@@ -9,8 +9,10 @@ export default function FrontView() {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 788);
   const placeholderText = isMobileView ? 'Search high resolution Images' : 'Search high resolution Images, categories, wallpapers';
   const dispatch = useDispatch();
+  
   const update = (e) => {
     dispatch(searchUpdateData(e.target.value));
+    dispatch({type:'setSearchVal',payload: e.target.value});
 }
   useEffect(() => {
     function handleResize() {

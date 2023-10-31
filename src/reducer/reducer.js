@@ -1,10 +1,11 @@
 const intialize ={
   data:[],
   mode:true,
-  showPop:0,
   backblur:false,
   searchVal:"",
-  totaldata:0 
+  total_page:5,
+  page:2
+   
 }
 export default function reducer(state=intialize,action){
   switch(action.type){
@@ -12,12 +13,17 @@ export default function reducer(state=intialize,action){
     return{
       ...state, 
       data:action.payload,
+      page:2,
+      total_page:5
+      
     }; 
 
     case 'SEARCH_DATA_SUCCESS':
       return {
         ...state,
-        data: action.payload,
+        data: action.payload.result,
+        page:2,
+        total_page:action.payload.total,
       };
 
     case 'TOGGLE_MODE':
@@ -40,8 +46,10 @@ export default function reducer(state=intialize,action){
 
       case 'SET_MORE_DATA':
         return{
-          data:[...new Set([...state.data,...action.payload])],
-          ...state
+          ...state,
+          data:[...state.data,...action.payload],
+        
+          page:state.page+1,
         }
 
     default :

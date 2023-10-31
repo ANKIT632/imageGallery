@@ -18,13 +18,14 @@ export const getData = (val) => async (dispatch) => {
 
 // search the action/action.js file
 
-export const searchUpdateData = (val) => async (dispatch) => {
+export const searchUpdateData = (searchVal) => async (dispatch) => {
   try {
-    if (val.trim() !== "") {
+    if (searchVal.trim() !== "") {
       const response = await axios.get(
-        `https://api.unsplash.com/search/photos?query=${val}&page=1&per_page=10&client_id=${key}`
+        `https://api.unsplash.com/search/photos?query=${searchVal}&page=1&per_page=10&client_id=${key}`
       );
-      dispatch({ type: 'SEARCH_DATA_SUCCESS', payload: response.data.results  });
+      
+      dispatch({ type: 'SEARCH_DATA_SUCCESS', payload: {result:response.data.results,total:response.data.total_pages} });
       
     } 
     else {
@@ -33,17 +34,23 @@ export const searchUpdateData = (val) => async (dispatch) => {
   } catch (error) {
     console.log(error);
   }
-};
+}
 
 // more Data
-export const moreData = (val) => async (dispatch) => {
+export const moreData = (searchVal,page) => async (dispatch) => {
   try{
-    if(val){
-         const response=await axios.get(`https://api.unsplash.com/search/photos?query=${val}&page=1&per_page=10&client_id=${key}`);
+    if(searchVal.trim()){
+      
+         const response=await axios.get(`https://api.unsplash.com/search/photos?query=${searchVal}&page=${page}&per_page=10&client_id=${key}`);
+       
          dispatch({type:'SET_MORE_DATA',payload:response.data.results})
     }
     else{
-
+      
+      const response = await axios.get(`https://api.unsplash.com/photos/?page=${page}&client_id=${key}`); 
+      console.log(response.data);
+      dispatch({type:'SET_MORE_DATA',payload:response.data})
+      
     }
   }
   catch(error){
