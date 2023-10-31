@@ -1,183 +1,187 @@
 #pop {
-    background-color: white;
-    /* Set the position to fixed to center it on the screen */
-    position: fixed;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Set the z-index to a high value to ensure it's on top of other elements */
-    z-index: 9999;
-    height: auto;
-    padding: 0px;
-    
-    }
+  background-color: white;
+  /* Set the position to fixed to center it on the screen */
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Set the z-index to a high value to ensure it's on top of other elements */
+  z-index: 9999;
+  height: auto;
+  padding: 0px;
 
-    #Profileimg{
-      position: relative;
-      top: -11px;
-    }
+}
 
-    #popImg{
-        width: 46rem;
-        height: 450px;
-      }
-    
-    
-      #popBtn{
-        width: 8rem;
-        top: 25.7rem;
-    right: 0.3rem;
-        position: fixed;
-        font-size: smaller;
-      }
+#Profileimg {
+  position: relative;
+  top: -11px;
+}
 
-      .Popbar {
-    
-        display: flex;
-        justify-content: space-between;
-   
-    
-      }
-      .Popleft {    
-     display: flex;
-     align-items: center;
-    
-    
-    }
-      
-      .PopinnerLeft {
-        padding-top: 0px;
-    padding-left: 25px;
-      }
-      
-      .PopinnerLeft p{
-        margin-bottom: 0rem;
-        
-        display: flex;
-        width: 160%  ;
-      }
-    
-      .Popright p{
-        margin-bottom: 0rem;
-      }
-      
-    
-      .Popright {
-       display: flex;
-       
-       
-    align-items: center
-      }
-    
-      #popIcon{
-        display: inline-flex;
-        align-items: center;
-        margin-left: -14px;
-        color: gray;
-    }
-    .popDiv{
-      
-    display: flex;
-    position: relative;
-    right: -11px;
-    }
-        
-    .mar{
-        margin-right: 5px;
-       
-    }
+#popImg {
+  width: 46rem;
+  height: 450px;
+}
 
 
-    
-    #closeIcon{
-      position:fixed;
-       left:45rem; 
-       background-color:white;
-        border-radius:50% ;
-        top: -7px;
-    }
+#popBtn {
+  width: 8rem;
+  top: 25.7rem;
+  right: 0.3rem;
+  position: fixed;
+  font-size: smaller;
+}
+
+.Popbar {
+
+  display: flex;
+  justify-content: space-between;
 
 
-    @media (max-width: 757px){
-      #popImg{
-        width: 41rem;
-        height: 384px;
-      }
+}
 
-      #closeIcon{
- 
-        left:40rem; 
-      
-     }
+.Popleft {
+  display: flex;
+  align-items: center;
 
-         #popBtn{   top: 21.6rem;
-            right: 0.4rem;}
 
-    }
+}
 
-    @media (max-width: 687px){
-      #popImg{
-        width: 36rem;
-        height: 384px;
-      }
+.PopinnerLeft {
+  padding-top: 0px;
+  padding-left: 25px;
+}
 
-      #closeIcon{
- 
-        left:35rem; 
-      
-     }
-  
-    }
+.PopinnerLeft p {
+  margin-bottom: 0rem;
 
-    @media (max-width: 623px){
-      #popImg{
-        width: 29rem;
-        height: 384px;
-      }
-      #closeIcon{
- 
-        left:28rem; 
-      
-     }
-     
-    }
+  display: flex;
+  width: 160%;
+}
 
-    @media (max-width: 602px){
-      #popImg{
-        width: 27rem;
-        height: 384px;
-      }
+.Popright p {
+  margin-bottom: 0rem;
+}
 
-      #closeIcon{
- 
-        left:26rem; 
-      
-     }
-    }
 
-    @media (max-width: 462px){
-      #popImg{
-        width: 20rem;
-        height: 384px;
-      }
+.Popright {
+  display: flex;
 
-      #closeIcon{
- 
-        left:19rem; 
-      
-     }
-    }
 
-    @media (max-width: 332px){
-      #popImg{
-        width: 18rem;
-        height: 384px;
-      }
+  align-items: center
+}
 
-      #closeIcon{
- 
-        left:17rem; 
-      
-     }
-    }
+#popIcon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: -14px;
+  color: gray;
+}
 
+.popDiv {
+
+  display: flex;
+  position: relative;
+  right: -11px;
+}
+
+.mar {
+  margin-right: 5px;
+
+}
+
+
+
+#closeIcon {
+  position: fixed;
+  left: 45rem;
+  background-color: white;
+  border-radius: 50%;
+  top: -7px;
+}
+
+
+@media (max-width: 757px) {
+  #popImg {
+    width: 41rem;
+    height: 384px;
+  }
+
+  #closeIcon {
+
+    left: 40rem;
+
+  }
+
+  #popBtn {
+    top: 21.6rem;
+    right: 0.4rem;
+  }
+
+}
+
+@media (max-width: 687px) {
+  #popImg {
+    width: 36rem;
+    height: 384px;
+  }
+
+  #closeIcon {
+
+    left: 35rem;
+
+  }
+
+}
+
+@media (max-width: 623px) {
+  #popImg {
+    width: 29rem;
+    height: 384px;
+  }
+
+  #closeIcon {
+
+    left: 28rem;
+
+  }
+
+}
+
+@media (max-width: 602px) {
+  #popImg {
+    width: 27rem;
+    height: 384px;
+  }
+
+  #closeIcon {
+
+    left: 26rem;
+
+  }
+}
+
+@media (max-width: 462px) {
+  #popImg {
+    width: 20rem;
+    height: 384px;
+  }
+
+  #closeIcon {
+
+    left: 19rem;
+
+  }
+}
+
+@media (max-width: 332px) {
+  #popImg {
+    width: 18rem;
+    height: 384px;
+  }
+
+  #closeIcon {
+
+    left: 17rem;
+
+  }
+}

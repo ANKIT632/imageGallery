@@ -1,58 +1,59 @@
-const intialize ={
-  data:[],
-  mode:true,
-  backblur:false,
-  searchVal:"",
-  total_page:5,
-  page:2
-   
+const intialize = {
+  data: [],
+  mode: true,
+  backblur: false,
+  searchVal: "",
+  total_page: 5,
+  page: 2,
+  showPop: 0
+
 }
-export default function reducer(state=intialize,action){
-  switch(action.type){
-   case 'FETCH_DATA_SUCCESS':
-    return{
-      ...state, 
-      data:action.payload,
-      page:2,
-      total_page:5
-      
-    }; 
+export default function reducer(state = intialize, action) {
+  switch (action.type) {
+    case 'FETCH_DATA_SUCCESS':
+      return {
+        ...state,
+        data: action.payload,
+        page: 2,
+        total_page: 5
+
+      };
 
     case 'SEARCH_DATA_SUCCESS':
       return {
         ...state,
         data: action.payload.result,
-        page:2,
-        total_page:action.payload.total,
+        page: 2,
+        total_page: action.payload.total,
       };
 
     case 'TOGGLE_MODE':
-      return{
+      return {
         ...state,
-        mode:action.payload
+        mode: action.payload
       }
 
     case 'GetPOP':
-      return{
+      return {
         ...state,
-        showPop:action.payload,
+        showPop: action.payload,
       }
-      
+
     case 'setSearchVal':
-      return{
+      return {
         ...state,
-        searchVal:action.payload,
-      }  
+        searchVal: action.payload,
+      }
 
-      case 'SET_MORE_DATA':
-        return{
-          ...state,
-          data:[...state.data,...action.payload],
-        
-          page:state.page+1,
-        }
+    case 'SET_MORE_DATA':
+      return {
+        ...state,
+        data: [...state.data, ...action.payload],
 
-    default :
-    return state;
+        page: state.page + 1,
+      }
+
+    default:
+      return state;
   }
 }

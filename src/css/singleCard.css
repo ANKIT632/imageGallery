@@ -1,72 +1,73 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.singleCardContainer{
+.singleCardContainer {
   /* place-self: flex-start; */
   width: 19rem;
-  
+
 }
+
 .bar {
-    
-    display: flex;
-    justify-content: space-between;
 
-  }
-  .left {    
- display: flex;
- align-items: center;
+  display: flex;
+  justify-content: space-between;
 
 }
-  
-  .innerLeft {
-    padding-left: 30px;
-  }
-  
-  .innerLeft p{
-    margin-bottom: 0rem;
-    display: flex
-  }
 
-  .right p{
-    margin-bottom: 0rem;
-  }
-  
+.left {
+  display: flex;
+  align-items: center;
 
-  .right {
-   display: flex;
-   
-   
-align-items: center
-  }
+}
+
+.innerLeft {
+  padding-left: 30px;
+}
+
+.innerLeft p {
+  margin-bottom: 0rem;
+  display: flex
+}
+
+.right p {
+  margin-bottom: 0rem;
+}
 
 
+.right {
+  display: flex;
 
 
-  .singleCardContainerClick{
-    cursor: default;
+  align-items: center
+}
+
+
+
+
+.singleCardContainerClick {
+  cursor: default;
   /* Set the filter to blur to make it blurry */
   filter: blur(5px);
   width: 21rem;
-  }
-  .cardName{
-    font-family: 'circular';
-    font-weight: 700;
-    font-size: 13.00px;
 }
 
-.NameHandler{
+.cardName {
+  font-family: 'circular';
+  font-weight: 700;
+  font-size: 13.00px;
+}
+
+.NameHandler {
   font-family: poppins;
   font-weight: 550;
   font-size: 12px;
   font-style: italic;
 }
 
-.likeP{
+.likeP {
   font-family: Montserrat;
   font-weight: 700;
   font-size: 13.63px;
 }
-
- 

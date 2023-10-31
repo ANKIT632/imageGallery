@@ -23,9 +23,10 @@
     font-size: medium;
     font-family: monospace;
     position: relative;
-   
+
 
 }
+
 .btnStyle:hover {
     background-color: rgb(35, 138, 241);
     border: none;
@@ -37,6 +38,6 @@
     font-size: medium;
     font-family: monospace;
     position: relative;
-   
+
 
 }
