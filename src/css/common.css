@@ -27,7 +27,7 @@
 
 }
 
-.btnStyle:hover {
+.btnStyle:active {
     background-color: rgb(35, 138, 241);
     border: none;
     padding: 8px;

@@ -48,7 +48,7 @@ export default function reducer(state = intialize, action) {
     case 'SET_MORE_DATA':
       return {
         ...state,
-        data: [...state.data, ...action.payload],
+        data: [...action.payload,...state.data ],
 
         page: state.page + 1,
       }
