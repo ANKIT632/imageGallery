@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect ,useState} from 'react';
 import SingleCard from './SingleCard';
 import { getData, moreData } from '../action/action';
 import { useDispatch, useSelector } from 'react-redux';
@@ -15,6 +15,9 @@ function Card() {
   const page = useSelector((state) => state.page);
   const searchArg = useSelector((state) => state.searchVal);
   const total = useSelector((state) => state.total_page);
+
+  const [show, setShow] = useState(true); 
+
   useEffect(() => {
     dispatch(getData(""));
   }, [dispatch]);
@@ -31,8 +34,8 @@ function Card() {
       dispatch(moreData(searchArg, page))
     }
     else {
-
-      alert("No More Data")
+     setShow(false);
+     
     }
   }
 
@@ -60,7 +63,7 @@ function Card() {
           }
 
         </div>
-        <button className='btnStyle cardBtn' onClick={moreDataResult}>Load More</button>
+        <button className={show?'btnStyle cardBtn':"cardBtn"} disabled={!show} onClick={moreDataResult} >{show?"Load More":"No more"}</button>
       </>
 
     );
