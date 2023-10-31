@@ -13,7 +13,21 @@
 }
 
 .btnStyle {
-    background-color: lightslategray;
+    background-color: rgb(95, 172, 249);
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    font-family: monospace;
+    position: relative;
+   
+
+}
+.btnStyle:hover {
+    background-color: rgb(35, 138, 241);
     border: none;
     padding: 8px;
     border-radius: 8px;
