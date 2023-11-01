@@ -22,14 +22,14 @@ setShow,
 downloadUrl
 }=props;
 
-const val=useSelector((state)=>state.showPop);
- const dispatch=useDispatch()
+
+ const dispatch=useDispatch();
 const update=()=>{
-  if(val===1){
+ 
     setShow(false);
    
-  dispatch({type:"GetPOP",payload:0})
-  }
+  dispatch({type:"GetPOP",payload:false})
+  
 }
 
 const handleDownloadClick = () => {

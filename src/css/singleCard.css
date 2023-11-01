@@ -47,10 +47,11 @@
 
 
 .singleCardContainerClick {
-  cursor: default;
-  /* Set the filter to blur to make it blurry */
-  filter: blur(5px);
-  width: 21rem;
+
+  filter: blur(3px);
+  width: 19rem;
+  pointer-events: none;
+
 }
 
 .cardName {

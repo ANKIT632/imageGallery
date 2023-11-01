@@ -13,7 +13,8 @@ import { Link } from 'react-router-dom';
 function NAVBAR() {
     const dispatch = useDispatch();
     const mode = useSelector((state) => state.mode);
-
+     const blur=useSelector((state)=>state.showPop);
+       console.log(blur);
     const update = (e) => {
         dispatch(searchUpdateData(e.target.value));
         dispatch({ type: 'setSearchVal', payload: e.target.value });
@@ -28,14 +29,14 @@ function NAVBAR() {
         <Navbar
             expand="lg"
             id='NavBar'
-            style={mode ? { backgroundColor: "white", color: "#1d1c1c" } : { backgroundColor: "#1d1c1c", color: "white" }} sticky='top'>
+            style={mode ? { backgroundColor: "white" , color: "#1d1c1c"  } : { backgroundColor: "#1d1c1c", color: "white" }} sticky='top'>
             <Container id='NavCon'>
                 <Link to='/' className="NavTittle" style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Image Gallery</Link>
 
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: "white" }} />
                 <Navbar.Collapse id="basic-navbar-nav" style={mode ? { backgroundColor: "white", width: "0px", color: "#1d1c1c" } : { backgroundColor: "#1d1c1c", color: "white", width: "0px" }}>
-                    <Nav className="me-auto">
+                    <Nav className="me-auto" id={blur?"setPointer":" "} >
                         <Form className="d-flex">
 
                             <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onChange={update} />
@@ -47,7 +48,6 @@ function NAVBAR() {
 
                     <Form.Check
                         reverse="true"
-
                         type="switch"
                         className="NavcheckBox"
                         label={mode ? "Dark Mode" : "Light Mode"}

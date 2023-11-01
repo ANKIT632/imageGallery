@@ -73,6 +73,10 @@
  
 }
 
+#setPointer{
+    pointer-events: none;
+}
+
 @media (max-width: 1199px) {
     .NavSearchClass {
         width: 345px; 

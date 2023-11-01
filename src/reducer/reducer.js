@@ -1,11 +1,10 @@
 const intialize = {
   data: [],
   mode: true,
-  backblur: false,
   searchVal: "",
   total_page: 5,
   page: 2,
-  showPop: 0
+  showPop: false
 
 }
 export default function reducer(state = intialize, action) {

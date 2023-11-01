@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { AiOutlineLike } from 'react-icons/ai';
 import '../css/singleCard.css';
 import { useSelector } from 'react-redux';
-import { memo, useEffect, useState } from 'react';
+import { memo, useState} from 'react';
 import Pop from './Pop';
 import { useDispatch } from 'react-redux';
 
@@ -21,45 +21,32 @@ function SingleCard(props) {
   } = props;
 
 
+  const blur = useSelector((state) => state.showPop);
+  const dispatch=useDispatch();
 
-  const [show, setShow] = useState(false);
-  const val = useSelector((state) => state.showPop);
-  const dispatch = useDispatch()
-  const [clicked, setClicked] = useState(false);
+  const [show,setShow]=useState(false)
   const update = () => {
-    if (val === 0) {
-      setShow(true);
-      dispatch({ type: "GetPOP", payload: 1 })
+      setShow(true); 
+      dispatch({type:'GetPOP',payload:true});
 
     }
 
-
-
-
-  }
-  useEffect(() => {
-    if (val === 1) {
-      setClicked(true);
-    }
-    else {
-      setClicked(false);
-    }
-  }, [val])
+  
 
   const mode = useSelector((state) => state.mode);
   return (
     <>
-      {show && <Pop name={name}
+      {show && <Pop
+        name={name}
         likes={likes}
         social={social}
         img={img}
         url={url}
         setShow={setShow}
-        setClicked={setClicked}
         downloadUrl={downloadUrl}
 
       />}
-      <Card className={`singleCardContainer${clicked ? 'Click' : ''}`} style={mode ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" }} onClick={update}>
+      <Card className={`singleCardContainer${blur ? 'Click' : ''}`} style={mode ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" }} onClick={update}>
         <Card.Img variant="top" src={url?.small} />
         <Card.Body>
 
