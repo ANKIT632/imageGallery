@@ -5,10 +5,15 @@ import Collection from './components/Collection'
 import Community from "./components/Community";
 import Explore from "./components/Explore";
 import './css/common.css'
+import Footer from "./components/Footer";
+import NotFoundPage from "./components/NotFoundPage";
+import './App.css'
+import { useSelector } from "react-redux";
 
 function App() {
+  const mode=useSelector((state=>state.mode))
   return (
-    <div className="App">
+    <div className= {mode ? "viewLight":"viewDark"}>
       <Router>
       <NavBar />
    
@@ -17,8 +22,10 @@ function App() {
             <Route path="/Community" element={<Community/>}/>
             <Route path="/Collection" element={<Collection/>}/>
             <Route path="/Explore" element={<Explore/>}/>
+            <Route path="/*" element={<NotFoundPage/>}/>
       
         </Routes>
+        <Footer/>
       </Router>
     </div>
   );

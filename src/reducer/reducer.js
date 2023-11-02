@@ -4,11 +4,17 @@ const intialize = {
   searchVal: "",
   total_page: 5,
   page: 2,
-  showPop: false
+  showPop: false,
+  isLoading:false
 
 }
 export default function reducer(state = intialize, action) {
   switch (action.type) {
+   case 'Loading':return{
+    ...state,
+    isLoading:action.payload,
+   }
+
     case 'FETCH_DATA_SUCCESS':
       return {
         ...state,

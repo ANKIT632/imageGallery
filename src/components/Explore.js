@@ -1,8 +1,10 @@
 import WorkingGif from "./WorkingGif"
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 export default function Explore() {
-
+  const mode=useSelector((state=>state.mode));
   const navigate = useNavigate();
 
   const handleRedirect = () => {
@@ -10,7 +12,7 @@ export default function Explore() {
     navigate('/');
   }
   return (
-    <div className='gifStyle'>
+    <div className={mode ?'Light gifStyle':'Dark gifStyle'} >
       <WorkingGif />
 
       <p className='gifFontStyle'>working On progress..</p>

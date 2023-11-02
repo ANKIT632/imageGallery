@@ -15,16 +15,16 @@ function Card() {
   const page = useSelector((state) => state.page);
   const searchArg = useSelector((state) => state.searchVal);
   const total = useSelector((state) => state.total_page);
-
+  const isLoading = useSelector((state) => state.isLoading);
   const [show, setShow] = useState(true); 
 
   useEffect(() => {
     dispatch(getData(""));
   }, [dispatch]);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-  }, [data])
+  // }, [data])
 
 
   const moreDataResult = () => {
@@ -40,7 +40,7 @@ function Card() {
   }
 
 
-  if (data) {
+  if (isLoading) {
     return (
       <>
 
