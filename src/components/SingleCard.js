@@ -53,7 +53,7 @@ function SingleCard(props) {
           <div className="bar" >
             <div className="left">
               <Col xs={1} md={20}>
-                <Image src={img} roundedCircle />
+                <Image src={img} roundedCircle className='ProfileSize' />
               </Col>
               <div className='innerLeft'>
                 <p className='cardName'>{name}</p>

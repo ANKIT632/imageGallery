@@ -68,7 +68,7 @@ const mode=useSelector((state)=>state.mode);
       <div className="Popbar">
         <div className="Popleft">
         <Col xs={1} md={20}>
-          <Image id='Profileimg' src={img} roundedCircle />
+          <Image id='Profileimg' src={img} roundedCircle className='ProfileSize'/>
         </Col>
         <div id='popDiv'>
             <div className='PopinnerLeft'>

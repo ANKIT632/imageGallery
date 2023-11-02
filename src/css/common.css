@@ -48,3 +48,7 @@ color: black;
 .Dark{
     color: white;
 }
+
+.ProfileSize{
+    height: 2rem;
+}
