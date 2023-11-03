@@ -25,9 +25,8 @@
 
 #popBtn {
   position: fixed;
-  bottom: 0;
+  bottom: 6rem;
   right: 0;
-  margin-bottom: 6rem;
   margin-right: 3px;
   height: 2rem;
 }

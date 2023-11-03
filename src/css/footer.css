@@ -28,7 +28,7 @@
     color: white;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 0.15em solid rgb(255, 253, 248); /* Typing cursor */
+    
     margin: 0;
     letter-spacing: 0.15em;
     animation: typing 4s infinite;
@@ -39,7 +39,7 @@
       width: 0;
     }
     to {
-      width: 65%;
+      width: 100%;
     }
   }
   
@@ -73,12 +73,12 @@
     position: absolute;
     left: 13px;
     font-family: monospace;
-    font-weight: 900;
+    font-weight: 600;
+    font-size: medium;
 }
   
 .footerIcon{
     width: 30px;
-  
     margin-left: 3px;
   
 }
