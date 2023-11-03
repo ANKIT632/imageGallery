@@ -22,7 +22,7 @@ function App() {
             <Route path="/Community" element={<Community/>}/>
             <Route path="/Collection" element={<Collection/>}/>
             <Route path="/Explore" element={<Explore/>}/>
-            <Route path="/*" element={<NotFoundPage/>}/>
+            <Route path="*" element={<NotFoundPage/>}/>
       
         </Routes>
         <Footer/>
