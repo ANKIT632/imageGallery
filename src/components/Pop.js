@@ -62,8 +62,8 @@ const mode=useSelector((state)=>state.mode);
     <Card  id='pop'  style={mode ?  { backgroundColor: "white", color: "black" }:{ backgroundColor: "black", color: "white" }} >
     
     <CloseButton id='closeIcon'  onClick={update}/>
-      <Card.Img id='popImg' variant="top" src={url.regular} onClick={handleDownloadClick} />
-      <img id='popBtn' src={downloadIcon} alt='download' />
+      <Card.Img id='popImg' variant="top" src={url.regular} />
+      <img id='popBtn' src={downloadIcon} alt='download'  onClick={handleDownloadClick} />
 
       <Card.Body>
      
