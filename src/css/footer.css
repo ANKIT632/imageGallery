@@ -12,7 +12,8 @@
 }
 
 
-.FooterDiv{   
+.FooterDiv{  
+   
     border-top: 2px solid white;
     background-color: black;
     height: 9rem;
@@ -20,6 +21,10 @@
     flex-direction: column;
     align-items: center;
     color: white;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    
 }
 
 .MoveIcon{
