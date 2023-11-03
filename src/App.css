@@ -1,10 +1,10 @@
 .viewLight{
-    height: 100vh;
+    height: 100%;
     color: black;
 }
 
 .viewDark{
-    height: 100vh;
+    height: 100%;
     background-color: rgb(28, 27, 27);
     columns: white;
 }

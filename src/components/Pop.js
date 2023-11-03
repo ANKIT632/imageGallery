@@ -6,10 +6,11 @@ import { AiOutlineLike,AiOutlineInstagram} from 'react-icons/ai';
 import { CiTwitter } from 'react-icons/ci';
 import '../css/singleCard.css';
 import { useSelector } from 'react-redux';
-import Button from 'react-bootstrap/Button';
 import { useDispatch } from 'react-redux';
 import CloseButton from 'react-bootstrap/CloseButton';
 import '../css/pop.css'
+import  downloadIcon from '../image/downloadIcon.png'
+
 
 function POP(props) {
 const {
@@ -61,8 +62,9 @@ const mode=useSelector((state)=>state.mode);
     <Card  id='pop'  style={mode ?  { backgroundColor: "white", color: "black" }:{ backgroundColor: "black", color: "white" }} >
     
     <CloseButton id='closeIcon'  onClick={update}/>
-      <Card.Img id='popImg' variant="top" src={url.regular} />
-      <Button id='popBtn' variant="success" onClick={handleDownloadClick} > download Image</Button>
+      <Card.Img id='popImg' variant="top" src={url.regular} onClick={handleDownloadClick} />
+      <img id='popBtn' src={downloadIcon} alt='download' />
+
       <Card.Body>
      
       <div className="Popbar">

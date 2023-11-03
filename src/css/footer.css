@@ -1,0 +1,84 @@
+.InnerDiv{
+
+    display: flex;
+    align-items: center;
+    background-color: #bdbdbd;
+    height: 3rem;
+    border: none;
+    border-radius: 1rem;
+    width: 65%;
+    margin-top: 6px;
+    justify-content: center;
+}
+
+
+.FooterDiv{   
+    border-top: 2px solid white;
+    background-color: black;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.MoveIcon{
+    font-family: pattaya;
+    font-size: large;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid rgb(255, 253, 248); /* Typing cursor */
+    margin: 0;
+    letter-spacing: 0.15em;
+    animation: typing 4s infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 65%;
+    }
+  }
+  
+ 
+
+  .footerText{
+    margin-bottom: 0px;
+  }
+  
+  .nameMoveIcon{
+    font-family: cursive;
+    font-size: large;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    animation: typings 9s infinite;
+  }
+  
+  @keyframes typings {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+ 
+  .footerCR{
+    position: absolute;
+    left: 13px;
+    font-family: monospace;
+    font-weight: 900;
+}
+  
+.footerIcon{
+    width: 30px;
+  
+    margin-left: 3px;
+  
+}
