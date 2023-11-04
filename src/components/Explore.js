@@ -15,7 +15,7 @@ export default function Explore() {
     <div className={mode ?'Light gifStyle':'Dark gifStyle'} >
       <WorkingGif />
 
-      <p className='gifFontStyle'>working On progress..</p>
+      <p className='gifFontStyle'>Still in Development..</p>
       <button className="btnStyle" onClick={handleRedirect}>Go To Home</button>
     </div>
   )
