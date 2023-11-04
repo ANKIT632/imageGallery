@@ -2,7 +2,7 @@ import React, { useEffect ,useState} from 'react';
 import SingleCard from './SingleCard';
 import { getData, moreData } from '../action/action';
 import { useDispatch, useSelector } from 'react-redux';
-
+import Footer from './Footer'
 import '../css/card.css';
 import Load from './Load';
 
@@ -64,6 +64,8 @@ function Card() {
 
         </div>
         <button className={show?'btnStyle cardBtn':"cardBtn"} disabled={!show} onClick={moreDataResult} >{show?"Load More":"No more"}</button>
+
+        <Footer/>
       </>
 
     );

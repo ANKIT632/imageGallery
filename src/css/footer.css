@@ -9,6 +9,7 @@
     width: 65%;
     margin-top: 6px;
     justify-content: center;
+    place-content: space-around;
 }
 
 
@@ -22,6 +23,7 @@
     align-items: center;
     color: white;
     position: relative;
+
     bottom: 0px;
     width: 100%;
     
@@ -84,6 +86,6 @@
   
 .footerIcon{
     width: 30px;
-    margin-left: 3px;
+    
   
 }
