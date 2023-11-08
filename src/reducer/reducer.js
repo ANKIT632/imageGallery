@@ -5,7 +5,8 @@ const intialize = {
   total_page: 5,
   page: 2,
   showPop: false,
-  isLoading:false
+  isLoading:false,
+  NavFlag:false,
 
 }
 export default function reducer(state = intialize, action) {
@@ -56,6 +57,13 @@ export default function reducer(state = intialize, action) {
         data: [...action.payload,...state.data ],
 
         page: state.page + 1,
+      }
+
+      case 'NAV_TOOGLE':{
+        return{
+          ...state,
+          NavFlag:action.payload,
+        }
       }
 
     default:

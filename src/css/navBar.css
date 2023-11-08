@@ -1,20 +1,20 @@
 /* styles.css */
-#navSearch{
+#navSearch {
 
     background-color: #efefef;
     background-repeat: no-repeat;
-    
+
 }
 
-#navSearchActive{    
+#navSearchActive {
     background-color: rgb(117, 115, 115);
 }
 
-.NavSearchClass::placeholder{
-   color: rgba(157, 157, 157, 0.92);
+.NavSearchClass::placeholder {
+    color: rgba(157, 157, 157, 0.92);
 }
 
-.NavSearchClass{
+.NavSearchClass {
     font: Montserrat;
     background-image: url(../image/search.png);
     width: 419px;
@@ -23,13 +23,14 @@
     outline: none;
     border-radius: 6px;
     background-position: 5px center;
-    padding-left:34px;
+    padding-left: 34px;
     background-size: 23px;
     background-repeat: no-repeat;
-    
+
     font-size: small;
 }
-.NavEl{
+
+.NavEl {
     color: rgb(29, 28, 28);
     font-size: 14px;
     font-weight: 700;
@@ -38,7 +39,7 @@
     padding-left: 21px;
 }
 
-.NavTittle{
+.NavTittle {
     font-family: pattaya;
     text-decoration: none;
     line-height: 43px;
@@ -47,52 +48,130 @@
     font-weight: 400;
 }
 
-#NavBar{
-    
-        height: 80px;
+#NavBar {
+
+    height: 80px;
 }
 
 
-#NavDiv{
+#NavDiv {
     display: flex;
     align-items: center;
- 
+
     justify-content: center;
     position: fixed;
     left: 93px;
 }
 
-.NavcheckBox{
-    color: rgb(29, 28, 28);
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-   align-items: center;
-   line-height: 23px;
- 
- 
+
+
+#setPointer {
+    pointer-events: none;
 }
 
-#setPointer{
-    pointer-events: none;
+
+.searchIcon {
+    display: none;
+}
+
+.ToggleContainer {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+
+}
+
+#closeSearch {
+    position: fixed;
+    right: 0;
+    height: 2rem;
+    top: 0px;
+}
+
+.NavSearchToggle {
+
+    font: Montserrat;
+    background-image: url(../image/search.png);
+    width: 100%;
+    height: 43px;
+    border: none;
+    outline: none;
+    background-position: 5px center;
+    padding-left: 34px;
+    background-size: 23px;
+    background-repeat: no-repeat;
+
+    font-size: small;
+
+
 }
 
 @media (max-width: 1199px) {
     .NavSearchClass {
-        width: 345px; 
+        width: 345px;
     }
 
-    #NavBar{
+    #NavBar {
         height: 80px;
         padding-left: 8px;
         padding-right: 8px;
     }
-    
-  
 
-    #NavCont{
-      display: contents;
+
+
+    #NavCont {
+        display: contents;
     }
-       
+
+}
+
+@media (max-width:991px) {
+    .NavCheck {
+
+        height: 2rem;
+        margin-right: 6px;
+        float: right;
+        margin-bottom: 4px;
+
     }
-    
+
+
+
+
+
+}
+
+@media (max-width:774px) {
+    .NavSearchClass {
+        width: 16rem;
+    }
+}
+
+@media (max-width:554px) {
+    .NavSearchClass {
+        width: 11rem;
+    }
+}
+
+@media (max-width:466px) {
+    .NavSearchClass {
+        display: none;
+    }
+
+    .searchIcon {
+        display: flex;
+    }
+
+    .NavTittle {
+        padding-right: 0rem;
+
+    }
+}
+
+@media (max-width:290px) {
+    .NavTittle {
+        font-size: 20px;
+
+    }
+}
