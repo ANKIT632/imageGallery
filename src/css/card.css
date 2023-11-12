@@ -181,19 +181,19 @@
 
 @media (max-width: 377px) {
   .singleCardContainer {
-    /* place-self: flex-start; */
-    width: 18rem;
+    place-self: flex-start;
+     width: 19rem;
 
   }
 
-}
+} 
 
 
-@media (max-width: 303px) {
+/* @media (max-width: 303px) {
   .singleCardContainer {
     /* place-self: flex-start; */
-    width: 15rem;
+    /* width: 15rem; */
 
-  }
+  /* }
 
-}
+} */ 

@@ -7,7 +7,7 @@ export default function Home() {
   const mode= useSelector((state)=>state.mode)
   return (
 
-    <div  style={mode?{ backgroundColor: "white" }:{ backgroundColor: "#1d1c1c" }}>
+    <div id='Home' style={mode?{ backgroundColor: "white" }:{ backgroundColor: "#1d1c1c" }}>
   
         <FrontView/>
         <Card/>

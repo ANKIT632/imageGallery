@@ -12,8 +12,10 @@ import { useSelector } from "react-redux";
 
 function App() {
   const mode=useSelector((state=>state.mode))
+   const isLoading=useSelector((state)=>state.isLoading)
+  
   return (
-    <div className= {mode ? "viewLight":"viewDark"}>
+    <div className= {mode ? "viewLight":"viewDark"} id={isLoading?"widthFix":"width"}>
       <Router>
       <NavBar />
    
@@ -25,6 +27,7 @@ function App() {
             <Route path="*" element={<NotFoundPage/>}/>
       
         </Routes>
+        
         
       </Router>
     </div>

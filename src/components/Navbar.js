@@ -43,10 +43,11 @@ function NAVBAR() {
                 style={mode ? { backgroundColor: "white", color: "#1d1c1c" } : { backgroundColor: "#1d1c1c", color: "white" }} sticky='top'>
                 <Container id='NavCon'>
                     <Link to='/' className="NavTittle" style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Image Gallery</Link>
-                    <Form className="d-flex">
 
+                    <Form className="d-flex">
                         <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onChange={update} />
                     </Form>
+
                     <img className='searchIcon' src={searchIcon} alt='search' onClick={toggleNav} />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: "white" }} />
 
@@ -72,7 +73,7 @@ function NAVBAR() {
         );
     else return (<div className='ToggleContainer'><Form className="d-flex">
 
-        <input id={mode && "navSearch"} className="NavSearchToggle" type='text' placeholder='Search Image Here' />
+        <input id={mode && "navSearch"} className="NavSearchToggle" type='text' placeholder='Search Image Here' onChange={update} />
     </Form>
         <CloseButton id='closeSearch' onClick={toggleNav} />
     </div>)

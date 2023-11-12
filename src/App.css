@@ -1,10 +1,30 @@
 .viewLight{
-    height: 100vh;
     color: black;
 }
 
 .viewDark{
-    height: 100vh;
     background-color: rgb(28, 27, 27);
     columns: white;
 }
+
+#width{
+    
+    height: 100vh;
+    @media(max-width:319px) {
+        width: 20rem;
+    }
+   
+
+}
+
+#widthFix{
+
+    @media(max-width:319px) {
+        width: 20rem;
+    }
+
+}
+
+  
+
+

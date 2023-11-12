@@ -1,0 +1,20 @@
+
+
+body {
+    overflow-y: scroll;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 6px; /* Adjust the width as needed */
+   
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #0076c4; /* Color of the thumb */
+    border-radius: 4px; /* Radius of the thumb */
+    height: 2px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the track */
+  }
