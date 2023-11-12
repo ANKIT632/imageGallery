@@ -21,7 +21,7 @@
     height: 43px;
     border: none;
     outline: none;
-    border-radius: 6px;
+    border-radius: 7px;
     background-position: 5px center;
     padding-left: 34px;
     background-size: 23px;
@@ -77,7 +77,7 @@
 .PopSearchContainer {
     width: 100%;
     position: fixed;
-    top: 1px;
+    top: 3px;
     z-index: 99;
 
 }
@@ -86,7 +86,7 @@
     position: fixed;
     height: 2rem;
     right: 6px;
-    top: 2px;
+    top: 6px;
 }
 
 .PopSearch {

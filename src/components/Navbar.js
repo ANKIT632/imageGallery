@@ -28,7 +28,7 @@ function NAVBAR() {
     
     }
     const update = (e) => {
-        if(e.code==='Enter'){
+        if(e.key==='Enter'){
             e.preventDefault();
            dispatch(searchUpdateData(e.target.value));
            dispatch({ type: 'setSearchVal', payload: e.target.value });
@@ -85,7 +85,7 @@ function NAVBAR() {
 
 {/* pop search */}
 
-        <input id={mode && "navSearch"} className="PopSearch" type='text' placeholder='Search Image Here' onClick={update}  />
+        <input id={mode && "navSearch"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDown={update}  />
     </Form>
         <CloseButton id='closeSearch' onClick={toggleNav} />
     </div>)
