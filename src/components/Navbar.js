@@ -22,17 +22,20 @@ function NAVBAR() {
     const NavFlag = useSelector((state) => state.NavFlag);
 
     const KeyHandler = (e) => {
-        console.log(e.target.value);
+
         dispatch(searchUpdateData(e.target.value));
         dispatch({ type: 'setSearchVal', payload: e.target.value });
-    
     }
+
     const update = (e) => {
-        if(e.key==='Enter'){
+        if (e.key === 'Enter') {
             e.preventDefault();
-           dispatch(searchUpdateData(e.target.value));
-           dispatch({ type: 'setSearchVal', payload: e.target.value });
-           }
+            dispatch(searchUpdateData(e.target.value));
+            dispatch({ type: 'setSearchVal', payload: e.target.value });
+            e.target.blur();
+        }
+
+
 
     }
 
@@ -55,7 +58,7 @@ function NAVBAR() {
                     <Link to='/' className="NavTittle" style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Image Gallery</Link>
 
                     <Form className="d-flex">
-                        <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onKeyDown={update} onKeyUp={KeyHandler} />
+                        <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onKeyDown={update} onChange={KeyHandler} />
                     </Form>
 
                     <img className='searchIcon' src={searchIcon} alt='search' onClick={toggleNav} />
@@ -83,9 +86,9 @@ function NAVBAR() {
         );
     else return (<div className='PopSearchContainer'><Form className="d-flex">
 
-{/* pop search */}
+        {/* pop search */}
 
-        <input id={mode && "navSearch"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDown={update}  />
+        <input id={mode && "navSearch"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDown={update} />
     </Form>
         <CloseButton id='closeSearch' onClick={toggleNav} />
     </div>)
