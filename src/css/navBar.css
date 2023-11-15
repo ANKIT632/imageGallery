@@ -103,8 +103,13 @@
     border: hidden;
     border-radius: 10px;
     height: 3rem;
+    color: white;
 
 
+}
+
+.PopSearch::placeholder {
+    color: rgba(157, 157, 157, 0.92);
 }
 
 @media (max-width: 1199px) {

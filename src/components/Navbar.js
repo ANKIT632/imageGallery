@@ -35,8 +35,6 @@ function NAVBAR() {
             e.target.blur();
         }
 
-
-
     }
 
     const toggleMode = () => {
@@ -88,7 +86,7 @@ function NAVBAR() {
 
         {/* pop search */}
 
-        <input id={mode && "navSearch"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDown={update} />
+        <input  id={mode ? "navSearch" : "navSearchActive"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDown={update} />
     </Form>
         <CloseButton id='closeSearch' onClick={toggleNav} />
     </div>)
