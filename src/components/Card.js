@@ -72,9 +72,9 @@ function Card() {
   }
   else {
     return (
-      <>
+      <div className='LoadingContainer'>
         <Load />
-      </>
+      </div>
     )
   }
 }

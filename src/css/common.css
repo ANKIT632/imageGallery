@@ -53,3 +53,7 @@ color: black;
 .ProfileSize{
     height: 2rem;
 }
+
+.LoadingContainer{
+    margin-top: 3rem;
+}

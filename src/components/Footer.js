@@ -18,7 +18,7 @@ function Footer() {
 
   return (
     <>
-      {console.log("Navcall")}
+      {console.log("Footercall")}
       <div className='FooterDiv'  style={!mode?{backgroundColor:"black"}:{}}>
         <div className='InnerDiv'>
           <img className="footerIcon" src={gmail} alt=' ' />
