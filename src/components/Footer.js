@@ -12,11 +12,14 @@ const handleLinkedInClick = () => {
 
 
 
+
 function Footer() {
 
+  const IsDataAvilable=useSelector((state=>state.IsDataAvilable));
+console.log(IsDataAvilable);
   const mode = useSelector((state) => state.mode);
 
-  return (
+  if(IsDataAvilable) return (
     <>
       {console.log("Footercall")}
       <div className='FooterDiv'  style={!mode?{backgroundColor:"black"}:{}}>
@@ -37,6 +40,10 @@ function Footer() {
       </div>
     </>
   )
+
+  else{
+    return(<></>)
+  }
 }
 
 export default memo(Footer);

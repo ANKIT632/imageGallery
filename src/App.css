@@ -8,13 +8,22 @@
 }
 
 
-#widthFix{
-
+#width{
+    height: 100vh;
     @media(max-width:319px) {
         width: 20rem;
     }
 
 }
+
+#widthFix{
+    height: 100vh;
+    @media(max-width:319px) {
+        width: 20rem;
+    }
+
+}
+
 
   
 

@@ -3,11 +3,13 @@
 
     background-color: #efefef;
     background-repeat: no-repeat;
+    color: black;
 
 }
 
 #navSearchActive {
     background-color: rgb(117, 115, 115);
+    color: white;
 }
 
 .NavSearchClass::placeholder {

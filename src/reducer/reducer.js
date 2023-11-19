@@ -7,6 +7,7 @@ const intialize = {
   showPop: false,
   isLoading:false,
   NavFlag:false,
+  IsDataAvilable:false,
 
 }
 export default function reducer(state = intialize, action) {
@@ -63,6 +64,13 @@ export default function reducer(state = intialize, action) {
         return{
           ...state,
           NavFlag:action.payload,
+        }
+      }
+
+      case 'CheckDataAvilability':{
+        return{
+          ...state,
+          IsDataAvilable:action.payload,
         }
       }
 
