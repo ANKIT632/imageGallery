@@ -16,7 +16,7 @@ function App() {
   
   
   return (
-    <div className= {mode ? "viewLight":"viewDark"}>
+    <div className= {mode ? "viewLight":"viewDark"} id="widthFix">
       <Router>
       <NavBar />
    
