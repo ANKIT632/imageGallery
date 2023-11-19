@@ -21,14 +21,11 @@ function NAVBAR() {
     const blur = useSelector((state) => state.showPop);
     const NavFlag = useSelector((state) => state.NavFlag);
 
-    const KeyHandler = (e) => {
-
-        dispatch(searchUpdateData(e.target.value));
-        dispatch({ type: 'setSearchVal', payload: e.target.value });
-    }
-
+   
+// update data on search
     const update = (e) => {
-        if (e.key === 'Enter') {
+     
+        if (e.key === 'Enter') { 
             e.preventDefault();
             dispatch(searchUpdateData(e.target.value));
             dispatch({ type: 'setSearchVal', payload: e.target.value });
@@ -55,9 +52,9 @@ function NAVBAR() {
                 <Container id='NavCon'>
                     <Link to='/' className="NavTittle" style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Image Gallery</Link>
 
-                    <Form className="d-flex">
-                        <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onKeyDown={update} onChange={KeyHandler} />
-                    </Form>
+                    
+                        <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onKeyUpCapture={(event)=>update(event)} />
+                    
 
                     <img className='searchIcon' src={searchIcon} alt='search' onClick={toggleNav} />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: "white" }} />
@@ -72,7 +69,7 @@ function NAVBAR() {
 
 
                         {
-                            mode ? <img className='NavCheck' style={{ height: "2rem" }} src={DarkIcon} alt='DarkMode' onClick={toggleMode} /> : <img className='NavCheck' src={SunIcon} alt='LiteMode' style={{ height: "2rem" }} onClick={toggleMode} />
+                            mode ? <img className='NavCheck' src={SunIcon} alt='DarkMode' onClick={toggleMode} /> : <img className='NavCheck' src={DarkIcon} alt='LiteMode' onClick={toggleMode} />
                         }
 
 
@@ -86,7 +83,7 @@ function NAVBAR() {
 
         {/* pop search */}
 
-        <input  id={mode ? "navSearch" : "navSearchActive"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDown={update} />
+        <input  id={mode ? "navSearch" : "navSearchActive"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDownCapture={update} />
     </Form>
         <CloseButton id='closeSearch' onClick={toggleNav} />
     </div>)

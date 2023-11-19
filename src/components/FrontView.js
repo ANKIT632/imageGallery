@@ -13,22 +13,16 @@ export default function FrontView() {
   const blur=useSelector((state)=>state.showPop);
   const mode = useSelector((state) => state.mode);
 
-
+// update data on search
     const update = (e) => {
-        if(e.code==='Enter'){
-
-            e.preventDefault();
+      e.preventDefault();
+        if(e.code==='Enter'){   
            dispatch(searchUpdateData(e.target.value));
            dispatch({ type: 'setSearchVal', payload: e.target.value });
            e.target.blur();
            }
-
-           else{
-        
-        dispatch(searchUpdateData(e.target.value));
-        dispatch({ type: 'setSearchVal', payload: e.target.value });
            
-       }
+
     }
 
 
@@ -51,7 +45,7 @@ export default function FrontView() {
 
       <h3 id="FrontHead">Download High Quality Images by creators</h3>
       <p id='frontp'>Over 2.4 million+ stock Images by our talented community</p>  
-      <input id="FrontSearchBar" type='text' placeholder={placeholderText} style={!mode?{backgroundColor:"rgb(60, 59, 59)"}:{}}  onKeyUp={update}/>
+      <input id="FrontSearchBar" type='text' placeholder={placeholderText} style={!mode?{backgroundColor:"rgb(60, 59, 59)"}:{}}  onKeyUpCapture={update}/>
 
     </div>
   )

@@ -17,6 +17,15 @@
 }
 
 
+.ImageNotAvilableContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ImageNotAvilable{
+  width: 24%;
+}
 
 /* For screens with a max-width of 768px (typical tablet size) */
 

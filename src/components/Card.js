@@ -2,29 +2,32 @@ import React, { useEffect ,useState} from 'react';
 import SingleCard from './SingleCard';
 import { getData, moreData } from '../action/action';
 import { useDispatch, useSelector } from 'react-redux';
-import Footer from './Footer'
 import '../css/card.css';
 import Load from './Load';
+import NotAvilableImage from '../image/no-image.png'
 
 
 
 function Card() {
-
+  
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
   const page = useSelector((state) => state.page);
   const searchArg = useSelector((state) => state.searchVal);
   const total = useSelector((state) => state.total_page);
   const isLoading = useSelector((state) => state.isLoading);
-  const [show, setShow] = useState(true); 
+  const [show, setShow] = useState(true);
+
+ 
+
+ 
 
   useEffect(() => {
     dispatch(getData(""));
+    
   }, [dispatch]);
 
-  // useEffect(() => {
 
-  // }, [data])
 
 
   const moreDataResult = () => {
@@ -41,6 +44,8 @@ function Card() {
 
 
   if (isLoading) {
+
+  
     return (
       <>
 
@@ -63,9 +68,12 @@ function Card() {
           }
 
         </div>
-        <button className={show?'btnStyle cardBtn':"cardBtn"} disabled={!show} onClick={moreDataResult} >{show?"Load More":"No more"}</button>
-
-        <Footer/>
+       
+        { data.length ? <button className={show?'btnStyle cardBtn':"cardBtn"} disabled={!show} onClick={moreDataResult} >{show ?"Load More":"No more"}</button> :<div className='ImageNotAvilableContainer'><img className="ImageNotAvilable" src={NotAvilableImage} alt="Not avilable Img"/></div>}
+            
+     
+        
+        
       </>
 
     );

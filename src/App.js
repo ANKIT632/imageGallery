@@ -9,13 +9,14 @@ import './css/common.css'
 import NotFoundPage from "./components/NotFoundPage";
 import './App.css'
 import { useSelector } from "react-redux";
+import Footer from "./components/Footer";
 
 function App() {
   const mode=useSelector((state=>state.mode))
-   const isLoading=useSelector((state)=>state.isLoading)
+  
   
   return (
-    <div className= {mode ? "viewLight":"viewDark"} id={isLoading?"widthFix":"width"}>
+    <div className= {mode ? "viewLight":"viewDark"}>
       <Router>
       <NavBar />
    
@@ -28,7 +29,7 @@ function App() {
       
         </Routes>
         
-        
+        <Footer/>
       </Router>
     </div>
   );
