@@ -69,7 +69,7 @@ function Card() {
 
         </div>
        
-        { data.length ? <button className={show?'btnStyle cardBtn':"cardBtn"} disabled={!show} onClick={moreDataResult} >{show ?"Load More":"No more"}</button> :<div className='ImageNotAvilableContainer'><img className="ImageNotAvilable" src={NotAvilableImage} alt="Not avilable Img"/></div>}
+        { data.length ? <button className={show?'btnStyle cardBtn':"cardBtn"} disabled={!show} onClick={moreDataResult} >{show ?"Load More":"No more"}</button> :<div className='ImageNotAvilableContainer'><img  className="ImageNotAvilable" src={NotAvilableImage} alt="Not avilable Img"/></div>}
             
      
         

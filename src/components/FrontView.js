@@ -16,7 +16,7 @@ export default function FrontView() {
 // update data on search
     const update = (e) => {
       e.preventDefault();
-        if(e.code==='Enter'){   
+        if(e.key==='Enter'){   
            dispatch(searchUpdateData(e.target.value));
            dispatch({ type: 'setSearchVal', payload: e.target.value });
            e.target.blur();

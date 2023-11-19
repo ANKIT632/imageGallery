@@ -131,7 +131,7 @@
 
 }
 .NavCheck {
-    transition: filter 5.5s ease;
+    transition: filter 6.5s ease;
     height: 2rem;
    
     
@@ -139,7 +139,7 @@
 }
 .NavCheck:hover{
  
-        filter: invert(100%) sepia(100%) hue-rotate(80deg); /* Invert colors for dark mode */
+        filter: invert(100%) sepia(100%) hue-rotate(180deg); /* Invert colors for dark mode */
       
 }
 
