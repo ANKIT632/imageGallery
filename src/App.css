@@ -9,7 +9,6 @@
 
 
 #width{
-    height: 100vh;
     @media(max-width:328px) {
         width: 21rem;
     }
