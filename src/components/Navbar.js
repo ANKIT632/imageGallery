@@ -10,8 +10,8 @@ import '../css/navBar.css';
 import { Link } from 'react-router-dom';
 import DarkIcon from '../icons/moon.png'
 import SunIcon from '../icons/sun.png'
-import searchIcon from '../image/search.png'
 import CloseButton from 'react-bootstrap/CloseButton';
+import searchIcon1 from '../image/search1.png'
 
 
 
@@ -56,7 +56,7 @@ function NAVBAR() {
                         <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onKeyUpCapture={(event)=>update(event)} />
                     
 
-                    <img className='searchIcon' src={searchIcon} alt='search' onClick={toggleNav} />
+                    <img className='searchIcon' src={searchIcon1} alt='search' onClick={toggleNav} />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: "white" }} />
 
                     <Navbar.Collapse id="basic-navbar-nav" style={mode ? { backgroundColor: "white", width: "0px", color: "#1d1c1c" } : { backgroundColor: "#1d1c1c", color: "white", width: "0px" }}>

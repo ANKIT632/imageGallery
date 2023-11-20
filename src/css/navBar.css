@@ -74,6 +74,7 @@
 
 .searchIcon {
     display: none;
+   
 }
 
 .PopSearchContainer {
@@ -180,6 +181,7 @@
 
     .searchIcon {
         display: flex;
+        width: 3rem;
     }
 
     .NavTittle {

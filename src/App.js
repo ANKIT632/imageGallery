@@ -16,7 +16,7 @@ function App() {
   const IsDataAvilable=useSelector((state=>state.IsDataAvilable));
   
   return (
-    <div className= {mode ? "viewLight":"viewDark"} id={IsDataAvilable?"width ":"widthFix"}>
+    <div className= {mode ? "viewLight":"viewDark"} id={IsDataAvilable?"width":"widthFix"}>
       <Router>
       <NavBar />
    

@@ -34,6 +34,7 @@ console.log(IsDataAvilable);
           <p className='MoveIcon'>Image Gallery</p>
           <p className='footerText nameMoveIcon'>developed by Ankit Gupta</p>
           <p className='footerCR'>copyright &copy;{new Date().getFullYear()} </p>
+          
 
         </div>
 

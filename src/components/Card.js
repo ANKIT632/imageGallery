@@ -1,6 +1,6 @@
 import React, { useEffect ,useState} from 'react';
 import SingleCard from './SingleCard';
-import { getData, moreData } from '../action/action';
+import { getData, moreData,searchUpdateData } from '../action/action';
 import { useDispatch, useSelector } from 'react-redux';
 import '../css/card.css';
 import Load from './Load';
@@ -24,16 +24,21 @@ function Card() {
 
   useEffect(() => {
     dispatch(getData(""));
+  
     
   }, [dispatch]);
 
-
+  // true when pevious loadmore are disabled the true for next page.
+useEffect(()=>{
+  if (page <= total) {
+    setShow(true);
+  }
+},[page,total])
 
 
   const moreDataResult = () => {
-
+    
     if (page <= total) {
-      console.log(searchArg);
       dispatch(moreData(searchArg, page))
     }
     else {
@@ -41,6 +46,15 @@ function Card() {
      
     }
   }
+  
+  const HandleEmptyPageBtn = () => {
+   
+        dispatch(searchUpdateData(""));
+        dispatch({ type: 'setSearchVal', payload: "" });
+      
+    }
+
+
 
 
   if (isLoading) {
@@ -69,7 +83,7 @@ function Card() {
 
         </div>
        
-        { data.length ? <button className={show?'btnStyle cardBtn':"cardBtn"} disabled={!show} onClick={moreDataResult} >{show ?"Load More":"No more"}</button> :<div className='ImageNotAvilableContainer'><img  className="ImageNotAvilable" src={NotAvilableImage} alt="Not avilable Img"/></div>}
+        { data.length ? <button className={show?'btnStyle cardBtn':"cardBtn"} disabled={!show} onClick={moreDataResult} >{show ?"Load More":"No more"}</button> :<div className='ImageNotAvilableContainer'><img  className="ImageNotAvilable" src={NotAvilableImage} alt="Not avilable Img"/><button className='btnStyle' style={{marginBottom:"10px"}} onClick={HandleEmptyPageBtn}>Go Back</button></div>}
             
      
         

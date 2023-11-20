@@ -10,16 +10,16 @@
 
 #width{
     height: 100vh;
-    @media(max-width:319px) {
-        width: 20rem;
+    @media(max-width:328px) {
+        width: 21rem;
     }
 
 }
 
 #widthFix{
     height: 100vh;
-    @media(max-width:319px) {
-        width: 20rem;
+    @media(max-width:328px) {
+        width: 21rem;
     }
 
 }
