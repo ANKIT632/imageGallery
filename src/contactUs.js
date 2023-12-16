@@ -18,13 +18,16 @@ const ContactUs = () => {
     navigate('/');
   }
   const [state, handleSubmit] = useForm("xleyqdoy");
+  
   if (state.succeeded) {
     return (<div className='mainFeedbackContainer'><div className='SuccessFeedbackDivContainer'>
       <h1>Your post send successfully</h1>
       <h2>Thankyou..</h2>
-      <button className="btnStyle" onClick={handleRedirect}>Go To Home</button>
+      <button  onClick={handleRedirect}>Go To Home</button>
     </div> </div>);
   }
+
+
 
   return (
     <div className="container_contact">
@@ -44,14 +47,16 @@ const ContactUs = () => {
 
           <ValidationError
             prefix="Message"
-            field="message"
+            field="message" 
             errors={state.errors}
           />
           <button type="submit" disabled={state.submitting}>Login</button>
+          <button className="btnStyle" onClick={handleRedirect}>Go To Home</button>
         </form>
 
 
       </div>
+      
     </div>
   )
 }

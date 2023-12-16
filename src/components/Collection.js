@@ -21,7 +21,7 @@ export default function Collection() {
   const handleRedirect = () => {
     navigate('/');
   }
-
+ 
 
   useEffect(() => {
     dispatch({ type: "IntializeCollection", payload: [] });
@@ -30,7 +30,7 @@ export default function Collection() {
 
   const isMounted = useRef(false);
   useEffect(() => {
-    console.log("callref", page)
+   
     if (isMounted.current) {
       dispatch(getCollectionData(page));
     } else {
