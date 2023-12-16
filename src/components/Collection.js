@@ -25,7 +25,8 @@ export default function Collection() {
 
   useEffect(() => {
     dispatch({ type: "IntializeCollection", payload: [] });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+   
+  
   }, [])
 
   const isMounted = useRef(false);
@@ -37,8 +38,7 @@ export default function Collection() {
       isMounted.current = true;
     }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page]);
+  }, [dispatch,page]);
 
 
 
@@ -58,7 +58,6 @@ export default function Collection() {
         loader={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
           <img src={loader} alt='loading...' />
         </div>}
-        scrollableTarget="Collection"
         endMessage={
           <p style={{ textAlign: 'center',color:"skyblue" }}>
             <b>You have seen it all</b>
