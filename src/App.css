@@ -3,7 +3,7 @@
 }
 
 .viewDark{
-    background-color: rgb(28, 27, 27);
+    background-color: rgb(39, 38, 38);
     columns: white;
 }
 
@@ -12,7 +12,6 @@
     @media(max-width:328px) {
         width: 21rem;
     }
-
 }
 
 #widthFix{

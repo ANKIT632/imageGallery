@@ -1,15 +1,15 @@
-import React, { useEffect ,useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import SingleCard from './SingleCard';
-import { getData, moreData,searchUpdateData } from '../action/action';
+import { getData, moreData, searchUpdateData } from '../action/action';
 import { useDispatch, useSelector } from 'react-redux';
 import '../css/card.css';
 import Load from './Load';
 import NotAvilableImage from '../image/no-image.png'
-
+import Footer from "./Footer";
 
 
 function Card() {
-  
+
   const dispatch = useDispatch();
   const data = useSelector((state) => state.data);
   const page = useSelector((state) => state.page);
@@ -18,48 +18,49 @@ function Card() {
   const isLoading = useSelector((state) => state.isLoading);
   const [show, setShow] = useState(true);
 
- 
 
- 
+
+
 
   useEffect(() => {
     dispatch(getData(""));
-  
-    
-  }, [dispatch]);
+
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // true when pevious loadmore are disabled the true for next page.
-useEffect(()=>{
-  if (page <= total) {
-    setShow(true);
-  }
-},[page,total])
+  useEffect(() => {
+    if (page <= total) {
+      setShow(true);
+    }
+  }, [page, total])
 
 
   const moreDataResult = () => {
-    
+
     if (page <= total) {
       dispatch(moreData(searchArg, page))
     }
     else {
-     setShow(false);
-     
+      setShow(false);
+
     }
   }
-  
+
   const HandleEmptyPageBtn = () => {
-   
-        dispatch(searchUpdateData(""));
-        dispatch({ type: 'setSearchVal', payload: "" });
-      
-    }
+
+    dispatch(searchUpdateData(""));
+    dispatch({ type: 'setSearchVal', payload: "" });
+
+  }
 
 
 
 
   if (isLoading) {
 
-  
+
     return (
       <>
 
@@ -82,12 +83,12 @@ useEffect(()=>{
           }
 
         </div>
-       
-        { data.length ? <button className={show?'btnStyle cardBtn':"cardBtn"} disabled={!show} onClick={moreDataResult} >{show ?"Load More":"No more"}</button> :<div className='ImageNotAvilableContainer'><img  className="ImageNotAvilable" src={NotAvilableImage} alt="Not avilable Img"/><button className='btnStyle' style={{marginBottom:"10px"}} onClick={HandleEmptyPageBtn}>Go Back</button></div>}
-            
-     
-        
-        
+
+        {data.length ? <button className={show ? 'btnStyle cardBtn' : "cardBtn"} disabled={!show} onClick={moreDataResult} >{show ? "Load More" : "No more"}</button> : <div className='ImageNotAvilableContainer'><img className="ImageNotAvilable" src={NotAvilableImage} alt="Not avilable Img" /><button className='btnStyle' style={{ marginBottom: "10px" }} onClick={HandleEmptyPageBtn}>Go Back</button></div>}
+
+
+        <Footer />
+
       </>
 
     );

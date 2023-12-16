@@ -1,0 +1,106 @@
+#contectHeader{
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+}
+.container_contact {
+    width: 100%;
+    height:80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .login-box {
+    background: linear-gradient(to left,#B4BDFF,#7ED7C1);
+   width:400px;
+    height: 300px;
+   border-radius: 10px;
+
+   
+  
+  }
+  
+  .login-box form{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    height: 320px;
+    box-shadow:2px 2px 2px #8ce5cf;
+    border-radius: 10px;
+    
+  }
+  .login-box textarea{
+    width: 70%;
+    height:50px;
+    border:none;
+    border-radius:6px;
+     padding: 10px;
+  }
+  
+  .login-box h1 {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+ 
+  .login-box input {
+    width: 70%;
+    padding: 10px;
+    
+    border:none;
+    
+    border-radius: 8px;
+    margin-bottom:5px;
+    outline:none;
+     
+  }
+  .login-box input:hover{
+   border:none;
+      border-bottom:2px solid ;
+    border-top:2px solid ;
+  }
+  .login-box textarea:hover{
+    border-bottom:2px solid ;
+    border-top:2px solid ;
+  }
+  
+  .login-box button {
+    background-color:rgb(58, 157, 233);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width:200px;
+    border-width: 2px;
+    border: 2px solid rgb(244, 234, 234);
+    
+  }
+  .login-box button:hover{
+    background-color:rgb(22, 104, 212);
+
+  }
+  
+ 
+  .SuccessFeedbackDivContainer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    box-shadow:2px 2px 2px #5a595c;
+    background: linear-gradient(to left,#d9aef0,#63ec9a);
+    border-radius: 25px;
+    width: 500px;
+    height: 120px;
+    text-align: center;
+  }
+
+  .mainFeedbackContainer{
+    display: flex;
+    
+    justify-content: center;
+    height: 85vh;
+    width: 100%;
+  }

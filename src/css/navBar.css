@@ -94,7 +94,7 @@
 
 .PopSearch {
     font: Montserrat;
-    background-image: url(../image/search.png);
+    background-image: url(../icons/Favicon.png);
     width: 100%;
     outline: none;
     background-position: 5px center;
@@ -103,10 +103,11 @@
     background-repeat: no-repeat;
 
     font-size: medium;
-    border: hidden;
-    border-radius: 10px;
+    border: 2px solid black;
+    border-radius: 16px;
     height: 3rem;
     color: white;
+    
 
 
 }

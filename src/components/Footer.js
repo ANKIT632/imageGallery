@@ -5,6 +5,7 @@ import facebook from '../icons/facebook.png'
 import linkedIn from '../icons/linkedIn.png'
 import { memo } from 'react'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const handleLinkedInClick = () => {
   window.open('https://www.linkedin.com/in/ankit-kumar-gupta-69537b228/', '_blank'); // Replace 'your-profile-url' with your LinkedIn profile URL
@@ -14,6 +15,7 @@ const handleLinkedInClick = () => {
 
 
 function Footer() {
+  const navigate=useNavigate();
 
   const IsDataAvilable=useSelector((state=>state.IsDataAvilable));
 console.log(IsDataAvilable);
@@ -24,7 +26,7 @@ console.log(IsDataAvilable);
       {console.log("Footercall")}
       <div className='FooterDiv'  style={!mode?{backgroundColor:"black"}:{}}>
         <div className='InnerDiv'>
-          <img className="footerIcon" src={gmail} alt=' ' />
+          <img className="footerIcon" src={gmail} alt=' ' onClick={()=>navigate("/contactUs")}/>
           <img className="footerIcon" src={facebook} alt=' ' />
           <img className="footerIcon" src={linkedIn} alt=' ' onClick={handleLinkedInClick}/>
         </div>

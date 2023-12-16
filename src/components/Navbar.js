@@ -23,7 +23,7 @@ function NAVBAR() {
 
    
 // update data on search
-    const update = (e) => {
+    const searchHandler = (e) => {
      
         if (e.key === 'Enter') { 
             e.preventDefault();
@@ -53,7 +53,7 @@ function NAVBAR() {
                     <Link to='/' className="NavTittle" style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Image Gallery</Link>
 
                     
-                        <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onKeyUpCapture={(event)=>update(event)} />
+                        <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onKeyUpCapture={(event)=>searchHandler(event)} />
                     
 
                     <img className='searchIcon' src={searchIcon1} alt='search' onClick={toggleNav} />
@@ -79,11 +79,12 @@ function NAVBAR() {
             </Navbar>
 
         );
+
     else return (<div className='PopSearchContainer'><Form className="d-flex">
 
-        {/* pop search */}
+        {/* mobile viwe  pop search bar*/}
 
-        <input  id={mode ? "navSearch" : "navSearchActive"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDownCapture={update} />
+        <input  id={mode ? "navSearch" : "navSearchActive"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDownCapture={searchHandler} />
     </Form>
         <CloseButton id='closeSearch' onClick={toggleNav} />
     </div>)
