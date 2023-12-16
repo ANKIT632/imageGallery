@@ -5,7 +5,7 @@ import Collection from './components/Collection'
 import Community from "./components/Community";
 import Explore from "./components/Explore";
 import './css/common.css';
-// import NotFoundPage from "./components/NotFoundPage";
+
 import './App.css';
 import { useSelector } from "react-redux";
 
@@ -19,19 +19,13 @@ function App() {
     <div className={mode ? "viewLight" : "viewDark"} id={IsDataAvilable ? "width" : "widthFix"}>
       <Router>
         <NavBar />
-
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Community" element={<Community />} />
           <Route path="/Collection" element={<Collection />} />
           <Route path="/Explore" element={<Explore />} />
           <Route path="/contactUs" element={<ContactUs />} />
-
-          {/* <Route path="*" element={<NotFoundPage/>}/> */}
-
         </Routes>
-
-
       </Router>
     </div>
   );

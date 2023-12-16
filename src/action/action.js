@@ -81,24 +81,37 @@ export const moreData = (searchVal, page) => async (dispatch) => {
   }
 }
 
+// intialize collection
+
+export const IntializeCollectionData = () => async (dispatch) => {
+
+ dispatch({ type: 'CheckDataAvilability', payload: false });
+ try {
+   const collections = await axios.get(`https://api.unsplash.com/collections?page=1&per_page=10&client_id=${key}`)
+
+   dispatch({ type: "IntializeCollection", payload: collections.data});
+
+   dispatch({ type: 'CheckDataAvilability', payload: true });
+
+ }
+ catch (error) {
+   console.log(error);
+ }
+}
+
 
 // get collection data
 
 export const getCollectionData = (page) => async (dispatch) => {
-   console.log("call action collec");
-
-  if(page===1){
-    dispatch({ type: "IntializeCollection", payload: [] });
-
-  }
-  dispatch({ type: 'CheckDataAvilability', payload: false });
+   
+if(page>=2){
   try {
     const collections = await axios.get(`https://api.unsplash.com/collections?page=${page}&per_page=10&client_id=${key}`)
     dispatch({ type: "GetCollectionData", payload: collections.data });
-    dispatch({ type: 'CheckDataAvilability', payload: true });
 
   }
   catch (error) {
     console.log(error);
   }
+}
 }

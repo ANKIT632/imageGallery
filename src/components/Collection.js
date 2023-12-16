@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState} from 'react';
 import SingleCollectionCard from '../components/SingleCollectionCard';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import { getCollectionData } from '../action/action'
+import { getCollectionData,IntializeCollectionData } from '../action/action'
 import '../css/collection.css';
 import InfiniteScroll from 'react-infinite-scroll-component'
 import loader from '../gif/loader.gif'
@@ -23,15 +23,12 @@ export default function Collection() {
     navigate('/');
   }
 
-  const isMounted = useRef(false);
-  useEffect(() => {
-   
-    if (isMounted.current) {
-      dispatch(getCollectionData(page));
-    } else {
-      isMounted.current = true;
-    }
+  useEffect(()=>{
+    dispatch(IntializeCollectionData());
+  },[])
 
+  useEffect(() => {
+      dispatch(getCollectionData(page));
   }, [page]);
 
 
