@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState, useRef } from 'react';
 import SingleCollectionCard from '../components/SingleCollectionCard';
 import { useNavigate } from 'react-router-dom';
@@ -21,13 +22,6 @@ export default function Collection() {
   const handleRedirect = () => {
     navigate('/');
   }
- 
-
-  useEffect(() => {
-    dispatch({ type: "IntializeCollection", payload: [] });
-   
-  
-  }, [])
 
   const isMounted = useRef(false);
   useEffect(() => {
@@ -38,7 +32,7 @@ export default function Collection() {
       isMounted.current = true;
     }
 
-  }, [dispatch,page]);
+  }, [page]);
 
 
 

@@ -85,7 +85,12 @@ export const moreData = (searchVal, page) => async (dispatch) => {
 // get collection data
 
 export const getCollectionData = (page) => async (dispatch) => {
-  //  console.log(page);
+   console.log("call action collec");
+
+  if(page===1){
+    dispatch({ type: "IntializeCollection", payload: [] });
+
+  }
   dispatch({ type: 'CheckDataAvilability', payload: false });
   try {
     const collections = await axios.get(`https://api.unsplash.com/collections?page=${page}&per_page=10&client_id=${key}`)
