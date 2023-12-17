@@ -22,18 +22,6 @@ function SingleCard(props) {
   } = props;
 
 
-  // const blur = useSelector((state) => state.showPop);
-  // const dispatch=useDispatch();
-
-  // const [show,setShow]=useState(false)
-  // const update = () => {
-  //     setShow(true); 
-  //     dispatch({type:'GetPOP',payload:true});
-
-  //   }
-
-  
-
   const mode = useSelector((state) => state.mode);
 
   // image download function
@@ -61,16 +49,6 @@ function SingleCard(props) {
 
   return (
     <>
-      {/* {show && <Pop
-        name={name}
-        likes={likes}
-        social={social} 
-        img={img}
-        url={url}
-        setShow={setShow}
-        downloadUrl={downloadUrl}
-
-      />} */}
 
       <Card className="singleCardContainer" style={mode ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" }} >
         <Card.Img variant="top" src={url?.small} />

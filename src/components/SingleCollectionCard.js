@@ -6,17 +6,18 @@ import photoIcon from '../icons/PhotoIcon.png'
 export default function SingleCollectionCard(props) {
   return (
     <div className='mainSingleCollectionContainer'>
+    
       <div className='CollectionsViewContainer'>
-        <div className='InnerViewContainer'>
-          <div className='subInnerViewContainer'>
+        <div className='InnerViewContainer1'>
+          <div className='subInnerViewContainer1'>
             <img className='CollectionImg' alt='Img1' src={props.PreViewPhoto[1]?.urls?.small} />
           </div>
-          <div className='subInnerViewContainer'>
+          <div className='subInnerViewContainer2'>
             <img className='CollectionImg' alt='Img1' src={props.PreViewPhoto[2]?.urls?.small} />
           </div>
-
         </div>
-        <div className='InnerViewContainer'>
+
+        <div className='InnerViewContainer2'>
           <img className='CollectionImg' alt='Img1' src={props.PreViewPhoto[0]?.urls?.small} />
         </div>
         <img id='CollectionIcon' alt='img' src={photoIcon} />
@@ -35,3 +36,4 @@ export default function SingleCollectionCard(props) {
     </div>
   )
 }
+ 
