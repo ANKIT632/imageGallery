@@ -104,7 +104,7 @@ export default function reducer(state = intialize, action) {
   case 'GetCollectionPhotos': {
     return {
       ...state,
-      collectionPhoto: [...state.collectionPhoto, ...action.payload],
+      collectionPhoto: [ ...action.payload,...state.collectionPhoto],
     }
   }
 

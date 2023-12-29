@@ -60,7 +60,7 @@ export default function Community() {
 
       <div className='AboutContainer2'>
         <div className='Img3x'>
-          <img src={photo[10]} alt='img' />
+          <img src={photo[9]} alt='img' />
 
           <h5>Over three million curated photos</h5>
           <p>We hand-select every photo and accept only the best, so that no matter what you need—you’ll find exactly what you’re looking for on Unsplash</p>

@@ -136,7 +136,11 @@ width: 75rem;
 }
 
 @media (max-width:998px){
+    .textContainer{
 
+        margin: 0;
+        
+    }
     .Img3x img{
        
         width: 250px;
