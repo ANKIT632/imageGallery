@@ -20,18 +20,20 @@
     background-color: rgb(166, 213, 220);
     position: relative;
     border: 1px solid white;
+    cursor: pointer;
+}
+
+.CollectionsViewContainer:active{
+    filter:brightness(50%)  ;
 }
 
 .InnerViewContainer1 {
-    width: 36%;
-    height: 250px;
-
+    width: 30%;
 }
 
 .InnerViewContainer2 {
     border-left: 3px solid rgb(250, 250, 250);
-    width: 64%;
-    height: 250px;
+    width: 70%;
 }
 
 .CollctionUserName {
@@ -43,19 +45,25 @@
 
 
 .subInnerViewContainer1 {
-    height: 50%;
+    height: 30%;
     border-bottom: 3px solid rgb(255, 255, 255);
 
 }
 
 .subInnerViewContainer2 {
-    height: 50%;
+    height: 30%;
+    border-bottom: 3px solid rgb(255, 255, 255);
+
+}
+
+.subInnerViewContainer3 {
+    height: 40%;
 
 
 }
 
 .CollectionImg {
-    width: 150%;
+    width: 100%;
     height: 100%;
 }
 

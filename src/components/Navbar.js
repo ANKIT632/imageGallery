@@ -7,7 +7,7 @@ import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import { useSelector } from 'react-redux';
 import '../css/navBar.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import DarkIcon from '../icons/moon.png'
 import SunIcon from '../icons/sun.png'
 import CloseButton from 'react-bootstrap/CloseButton';
@@ -20,16 +20,18 @@ function NAVBAR() {
     const mode = useSelector((state) => state.mode);
     const blur = useSelector((state) => state.showPop);
     const NavFlag = useSelector((state) => state.NavFlag);
+    const navigate=useNavigate();
 
-   
-// update data on search
+    // update data on search
     const searchHandler = (e) => {
-     
-        if (e.key === 'Enter') { 
+        navigate('/')
+        if (e.key === 'Enter') {
+           
             e.preventDefault();
             dispatch(searchUpdateData(e.target.value));
             dispatch({ type: 'setSearchVal', payload: e.target.value });
             e.target.blur();
+           
         }
 
     }
@@ -52,19 +54,18 @@ function NAVBAR() {
                 <Container id='NavCon'>
                     <Link to='/' className="NavTittle" style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Image Gallery</Link>
 
-                    
-                        <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onKeyUpCapture={(event)=>searchHandler(event)} />
-                    
+
+                    <input id={mode ? "navSearch" : "navSearchActive"} className="NavSearchClass" type='text' placeholder='Search Image Here' onKeyUpCapture={(event) => searchHandler(event)} />
+
 
                     <img className='searchIcon' src={searchIcon1} alt='search' onClick={toggleNav} />
                     <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: "white" }} />
 
                     <Navbar.Collapse id="basic-navbar-nav" style={mode ? { backgroundColor: "white", width: "0px", color: "#1d1c1c" } : { backgroundColor: "#1d1c1c", color: "white", width: "0px" }}>
                         <Nav className="me-auto" id={blur ? "setPointer" : " "} >
-
-                            <Link to='/Explore' className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Explore</Link>
                             <Link to="/Collection" className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Collection</Link>
-                            <Link to="/Community" className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Community</Link>
+                            <Link to="/aboutUs" className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>AboutUs</Link>
+                            <Link to='/ContactUs' className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>ContactUs</Link>
                         </Nav>
 
 
@@ -84,7 +85,7 @@ function NAVBAR() {
 
         {/* mobile viwe  pop search bar*/}
 
-        <input  id={mode ? "navSearch" : "navSearchActive"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDownCapture={searchHandler} />
+        <input id={mode ? "navSearch" : "navSearchActive"} className="PopSearch" type='text' placeholder='Search Image Here' onKeyDownCapture={searchHandler} />
     </Form>
         <CloseButton id='closeSearch' onClick={toggleNav} />
     </div>)

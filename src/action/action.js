@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-
 const key = process.env.REACT_APP_API_KEY;
 
 
@@ -16,7 +15,7 @@ export const getData = () => async (dispatch) => {
     dispatch({ type: 'Loading', payload: true });
 
     if (response.data.length > 0) {
-      console.log("call data res");
+
       dispatch({ type: 'CheckDataAvilability', payload: true });
     }
 
@@ -85,33 +84,88 @@ export const moreData = (searchVal, page) => async (dispatch) => {
 
 export const IntializeCollectionData = () => async (dispatch) => {
 
- dispatch({ type: 'CheckDataAvilability', payload: false });
- try {
-   const collections = await axios.get(`https://api.unsplash.com/collections?page=1&per_page=10&client_id=${key}`)
-
-   dispatch({ type: "IntializeCollection", payload: collections.data});
-
-   dispatch({ type: 'CheckDataAvilability', payload: true });
-
- }
- catch (error) {
-   console.log(error);
- }
-}
-
-
-// get collection data
-
-export const getCollectionData = (page) => async (dispatch) => {
-   
-if(page>=2){
+  dispatch({ type: 'CheckDataAvilability', payload: false });
   try {
-    const collections = await axios.get(`https://api.unsplash.com/collections?page=${page}&per_page=10&client_id=${key}`)
-    dispatch({ type: "GetCollectionData", payload: collections.data });
+    const collections = await axios.get(`https://api.unsplash.com/collections?page=1&per_page=10&client_id=${key}`)
+
+    dispatch({ type: "IntializeCollection", payload: collections.data });
+
+    dispatch({ type: 'CheckDataAvilability', payload: true });
 
   }
   catch (error) {
     console.log(error);
   }
 }
+
+
+// get collection data
+
+export const getCollectionData = (page) => async (dispatch) => {
+
+  if (page >= 2) {
+    try {
+      const collections = await axios.get(`https://api.unsplash.com/collections?page=${page}&per_page=10&client_id=${key}`)
+      dispatch({ type: "GetCollectionData", payload: collections.data });
+
+    }
+    catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+// intialize collection
+
+export const IntializeCollectionPhotos = (id) => async (dispatch) => {
+
+
+  dispatch({ type: 'CheckDataAvilability', payload: false });
+  try {
+    const collections = await axios.get(`https://api.unsplash.com/collections/${id}/photos?page=1&per_page=10&client_id=${key}`)
+
+
+    dispatch({ type: "IntializeCollectionPhotos", payload: { photos: collections.data } });
+
+    dispatch({ type: 'CheckDataAvilability', payload: true });
+
+  }
+  catch (error) {
+    console.log(error);
+  }
+}
+
+
+
+export const getCollectionPhotos = (page, id) => async (dispatch) => {
+
+  if (page >= 2) {
+    try {
+      const collections = await axios.get(`https://api.unsplash.com/collections/${id}/photos?page=${page}&per_page=10&client_id=${key}`)
+      dispatch({ type: "GetCollectionPhotos", payload: collections.data });
+
+    }
+    catch (error) {
+      console.log(error);
+    }
+  }
+}
+
+
+export const getAboutPhoto = () => async (dispatch) => {
+  try {
+    dispatch({ type: 'CheckDataAvilability', payload: false });
+    const response = await axios.get(`https://api.unsplash.com/photos/?page=1&per_page=10&client_id=${key}`);
+
+
+    dispatch({ type: 'SetAboutPhoto', payload: response.data });
+
+
+    dispatch({ type: 'CheckDataAvilability', payload: true });
+
+
+  } catch (error) {
+    console.error(error);
+
+  }
 }

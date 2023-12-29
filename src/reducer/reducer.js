@@ -1,3 +1,4 @@
+
 const intialize = {
   data: [],
   mode: true,
@@ -9,6 +10,8 @@ const intialize = {
   NavFlag: false,
   IsDataAvilable: false,
   collectionData: [],
+  collectionPhoto:[],
+  aboutPhoto:[],
 
 
 }
@@ -91,6 +94,28 @@ export default function reducer(state = intialize, action) {
         collectionData: [...state.collectionData, ...action.payload],
       }
     }
+
+  case 'IntializeCollectionPhotos':{
+   return{ ...state,
+    collectionPhoto: action.payload.photos,
+  }
+  }
+
+  case 'GetCollectionPhotos': {
+    return {
+      ...state,
+      collectionPhoto: [...state.collectionPhoto, ...action.payload],
+    }
+  }
+
+  case 'SetAboutPhoto':{
+   const filterData=action.payload.map((item)=>item.urls.small)
+   console.log("ph",filterData)
+    return{
+      ...state,
+      aboutPhoto:filterData,
+    }
+  }
     default:
       return state;
   }

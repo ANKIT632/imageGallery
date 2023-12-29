@@ -7,10 +7,17 @@
     justify-content: center;
     align-items: center;
     font-weight: 700;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border-bottom: 2px solid gray;
     font-size: 16px;
     margin-bottom: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.TitleCollectionsContainer p,h4{
+    margin: 0;
+   
 }
 
 .CollectionsContainer {

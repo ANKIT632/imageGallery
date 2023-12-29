@@ -1,9 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import SingleCollectionCard from '../components/SingleCollectionCard';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import { getCollectionData,IntializeCollectionData } from '../action/action'
+import { getCollectionData, IntializeCollectionData } from '../action/action'
 import '../css/collection.css';
 import InfiniteScroll from 'react-infinite-scroll-component'
 import loader from '../gif/loader.gif'
@@ -23,23 +23,22 @@ export default function Collection() {
     navigate('/');
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(IntializeCollectionData());
-  },[])
+  }, [])
 
   useEffect(() => {
-      dispatch(getCollectionData(page));
+    dispatch(getCollectionData(page));
   }, [page]);
 
 
 
   return (
     <div className='Collection'>
-      {console.log("callfun", page)}
-      {console.log("callfunData", collectionData)}
+
       <div className='TitleCollectionsContainer'>
         <h4>Gallery Collections</h4>
-        <p>Explore Daily new collections..</p>
+        <p>Explore Daily new collections</p>
       </div>
 
       <InfiniteScroll
@@ -50,7 +49,7 @@ export default function Collection() {
           <img src={loader} alt='loading...' />
         </div>}
         endMessage={
-          <p style={{ textAlign: 'center',color:"skyblue" }}>
+          <p style={{ textAlign: 'center', color: "skyblue" }}>
             <b>You have seen it all</b>
           </p>
         }
@@ -63,10 +62,13 @@ export default function Collection() {
             return (<SingleCollectionCard
               userName={data.user?.name}
               title={data.title}
-              TotalPhotot={data.total_photos}
+              TotalPhoto={data.total_photos}
               tag={data.tags}
               PreViewPhoto={data.preview_photos}
-              key={idx} />);
+              id={data.id}
+              key={idx} />
+
+            );
           })
 
           }
