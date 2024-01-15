@@ -40,7 +40,7 @@ export default function Community() {
 
           <button className="btnStyle" style={{ backgroundColor: "black" }} onClick={handleRedirect}>Start browsing</button>
           <br />
-          <button className="btnStyle">collections</button>
+          <button className="btnStyle" onClick={()=>navigate('/Collection')}>collections</button>
         </div>
 
         <div className='MainImageContainer'>
@@ -80,7 +80,7 @@ export default function Community() {
         </div>
       </div>
       <br />
-      <div className='AboutContainer3'>
+      <div id='AboutContainer3'>
 
 
         <img src={photo[7]} alt='img' />

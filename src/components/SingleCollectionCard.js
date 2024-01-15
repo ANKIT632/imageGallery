@@ -5,20 +5,27 @@ import { useNavigate } from 'react-router-dom'
 
 
 export default function SingleCollectionCard(props) {
-     
-  const navigate =useNavigate();
 
-  const collectionPhotoHandler=()=>{
-     
+  const navigate = useNavigate();
+
+  const collectionPhotoHandler = () => {
+
     navigate(`/CollectionsPhoto/${props.id}/${props.TotalPhoto}`);
   }
 
   return (
     <div className='mainSingleCollectionContainer'>
-    
+
       <div className='CollectionsViewContainer' onClick={collectionPhotoHandler}>
         <div className='InnerViewContainer1'>
+
           <div className='subInnerViewContainer1'>
+
+            <div id='collectionIconContainer'>
+              <img id='CollectionIcon' alt='img' src={photoIcon} />
+              <p id='CollectionCount'>{props.TotalPhoto - 10 + "+"}</p>
+            </div>
+
             <img className='CollectionImg' alt='Img1' src={props.PreViewPhoto[1]?.urls?.small} />
           </div>
           <div className='subInnerViewContainer2'>
@@ -32,8 +39,8 @@ export default function SingleCollectionCard(props) {
         <div className='InnerViewContainer2'>
           <img className='CollectionImg' alt='Img1' src={props.PreViewPhoto[0]?.urls?.small} />
         </div>
-        <img id='CollectionIcon' alt='img' src={photoIcon} />
-        <p id='CollectionCount'>{props.TotalPhoto - 10 + "+"}</p>
+
+
       </div>
 
       <div className='CollectionDescriptionContainer'>
@@ -48,4 +55,3 @@ export default function SingleCollectionCard(props) {
     </div>
   )
 }
- 

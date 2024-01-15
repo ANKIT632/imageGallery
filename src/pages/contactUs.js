@@ -1,4 +1,4 @@
-import './css/contact.css';
+import '../css/contact.css';
 import { useForm, ValidationError } from '@formspree/react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from "react-redux";
@@ -34,9 +34,10 @@ const ContactUs = () => {
       <div className="login-box">
         <h1 id='contectHeader'>ContectUs</h1>
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Enter Your Name" />
+          <input type="text" id='name' placeholder="Enter Your Name"  />
           <input type="email" id="email"
-            name="email" placeholder="Email" />
+            name="email" placeholder="Email"/>
+
           <ValidationError
             prefix="Email"
             field="email"

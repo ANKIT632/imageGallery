@@ -1,15 +1,15 @@
 import NavBar from "./components/Navbar";
-import Home from "./Home"
+import Home from "./pages/Home"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Collection from './components/Collection'
-import AboutUs from "./components/AboutUs";
+import Collection from './pages/Collection'
+import AboutUs from "./pages/AboutUs";
 import Explore from "./components/Explore";
 import './css/common.css';
 
 import './App.css';
 import { useSelector } from "react-redux";
 
-import ContactUs from "./contactUs";
+import ContactUs from "./pages/contactUs";
 import CollectionsPhoto from "./components/CollectionsPhoto";
 
 function App() {
@@ -21,13 +21,13 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home />} />
           <Route path="/aboutUs" element={<AboutUs />} />
           <Route path="/Collection" element={<Collection />} />
-          <Route path="/CollectionsPhoto/:id/:totalPhotos" element={<CollectionsPhoto/>} />
+          <Route path="/CollectionsPhoto/:id/:totalPhotos" element={<CollectionsPhoto />} />
           <Route path="/Explore" element={<Explore />} />
           <Route path="/contactUs" element={<ContactUs />} />
-         
+
         </Routes>
       </Router>
     </div>

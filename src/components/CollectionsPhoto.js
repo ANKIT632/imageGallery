@@ -36,7 +36,7 @@ const [page, setpage] = useState(1);
         next={() => setpage(page + 1)}
         hasMore={page*10 <= totalPhotos}
         loader={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100px' }}>
-          <img src={loader} alt='loading...' />
+          <img style={{height:"3rem"}} src={loader} alt='loading...' />
         </div>}
         endMessage={
           <p style={{ textAlign: 'center',color:"skyblue" }}>

@@ -46,7 +46,7 @@ function NAVBAR() {
 
     if (!NavFlag)
         return (
-
+       <>
             <Navbar
                 expand="lg"
                 id='NavBar'
@@ -73,11 +73,14 @@ function NAVBAR() {
                             mode ? <img className='NavCheck' src={SunIcon} alt='DarkMode' onClick={toggleMode} /> : <img className='NavCheck' src={DarkIcon} alt='LiteMode' onClick={toggleMode} />
                         }
 
-
+ 
                     </Navbar.Collapse>
-
+                
                 </Container>
+            
             </Navbar>
+            
+            </>
 
         );
 

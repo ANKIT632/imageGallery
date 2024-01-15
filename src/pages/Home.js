@@ -1,6 +1,6 @@
 import React from 'react'
-import FrontView from './components/FrontView'
-import Card from './components/Card'
+import FrontView from '../components/FrontView'
+import Card from '../components/Card'
 import { useSelector } from 'react-redux'
 
 export default function Home() {
@@ -14,3 +14,4 @@ export default function Home() {
     </div>
   )
 }
+ 

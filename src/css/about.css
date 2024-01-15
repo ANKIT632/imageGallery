@@ -2,9 +2,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+    margin-top:10px;
 }
 .AboutMainContainer h2{
+ 
     margin: 10px;
 }
 .AboutContainer1{
@@ -39,18 +40,17 @@
 
 .ImgContainer1{
 
-
- padding-top: 1rem;
+ padding-top: 1.3rem;
  display: flex;
  flex-direction: column;
 
 }
 
 .ImgContainer2{
+    
  display: flex;
  flex-direction: column;
  margin-right: 20px;
- 
     
 }
 
@@ -92,7 +92,7 @@ border-top:1px solid rgb(255, 255, 255) ;
    
 }
 
-.AboutContainer3{
+#AboutContainer3{
    
 display: flex;
 background-color: rgb(148, 148, 148);
@@ -101,11 +101,18 @@ border:2px solid rgb(255, 255, 255) ;
 width: 75rem;
 }
 
-.AboutContainer3 img{
+#AboutContainer3 img{
   
     padding-right: 8px;
     height: 300px;
     width: 900px;
+}
+
+#AboutContainer3 h3{
+    margin-left: 5px;
+}
+#AboutContainer3 p{
+    margin-left: 5px;
 }
 
 @media (max-width:1253px){
@@ -123,12 +130,12 @@ width: 75rem;
        
     }
 
-    .AboutContainer3{
+    #AboutContainer3{
         width: 60rem; 
 
     }
 
-    .AboutContainer3 img{
+    #AboutContainer3 img{
         height: 250px;
         width: 600px;
     }
@@ -136,11 +143,7 @@ width: 75rem;
 }
 
 @media (max-width:998px){
-    .textContainer{
-
-        margin: 0;
-        
-    }
+   
     .Img3x img{
        
         width: 250px;
@@ -153,19 +156,24 @@ width: 75rem;
        
     }
 
-    .AboutContainer3{
+    #AboutContainer3{
         width: 50rem; 
 
     }
 
-    .AboutContainer3 img{
+    #AboutContainer3 img{
         height: 200px;
         width:500px;
     }
 }
 
 @media (max-width:872px){
-    .textContainer h1,p{
+
+    .textContainer h1{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .textContainer p{
         margin-left: 5px;
         margin-right: 5px;
     }
@@ -180,7 +188,11 @@ width: 75rem;
         width: 95%;
        
     }
-    .Img3x h5,p{
+    .Img3x h5{
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+    .Img3x p{
         margin-left: 10px;
         margin-right: 5px;
     }
@@ -202,27 +214,25 @@ width: 75rem;
       
     }
 
-    .AboutContainer3 {
+    #AboutContainer3 {
     
         flex-direction: column;
     }
 
-    .AboutContainer3{
+    #AboutContainer3{
         width: 90%; 
     
     }
 
   
 
-    .AboutContainer3 img{
+    #AboutContainer3 img{
         padding-right: 0;
         height: 250px;
         width: 100%;
     }
 
-    .AboutContainer3 h3,p{
-        margin-left: 20px;
-    }
+   
     
 
 }

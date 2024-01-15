@@ -53,6 +53,7 @@
 #NavBar {
 
     height: 80px;
+    border-bottom: 1.5px solid rgb(221, 221, 221);
 }
 
 

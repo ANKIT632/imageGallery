@@ -11,9 +11,34 @@
   
     flex-direction: column;
    align-items: center;
-    
+}
   
-  }
+ #email{
+  background-image:url('../image/gmailIcon.png');
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: 10px 10px; 
+  padding-left: 40px;
+
+ }
+
+ #name{
+  background-image:url('../image/userIcon.png');
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: 10px 10px; 
+  padding-left: 40px;
+
+ }
+
+ #email{
+  background-image:url('../image/gmailIcon.png');
+  background-repeat: no-repeat;
+  background-size: 23px;
+  background-position: 10px 10px; 
+  padding-left: 40px;
+
+ }
   
   .login-box {
     background: linear-gradient(to left,#B4BDFF,#7ED7C1);
