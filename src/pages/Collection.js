@@ -7,7 +7,6 @@ import { getCollectionData, IntializeCollectionData } from '../action/action'
 import '../css/collection.css';
 import InfiniteScroll from 'react-infinite-scroll-component'
 import loader from '../gif/loader.gif'
-import loaders from '../components/Load'
 
 
 export default function Collection() {

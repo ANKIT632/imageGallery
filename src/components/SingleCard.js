@@ -5,10 +5,9 @@ import Col from 'react-bootstrap/Col';
 import { AiOutlineLike } from 'react-icons/ai';
 import '../css/singleCard.css';
 import { useSelector } from 'react-redux';
-import { memo} from 'react';
-// import Pop from './Pop';
-// import { useDispatch } from 'react-redux';
-import  downloadIcon from '../image/downloadIcon.png'
+import { memo } from 'react';
+
+import downloadIcon from '../image/downloadIcon.png'
 
 function SingleCard(props) {
   const {
@@ -27,23 +26,23 @@ function SingleCard(props) {
   // image download function
   const handleDownloadClick = () => {
     const imageUrl = downloadUrl;
-    console.log(imageUrl);
-  
+
+
     fetch(imageUrl)
       .then((response) => response.blob())
       .then((imageBlob) => {
         const url = URL.createObjectURL(imageBlob);
         const link = document.createElement('a');
         link.href = url;
-  
+
         link.download = 'image.jpg';
-  
+
         link.click();
-  
+
       })
       .catch((error) => {
         console.error('Error downloading image:', error);
-        
+
       });
   };
 
@@ -52,7 +51,7 @@ function SingleCard(props) {
 
       <Card className="singleCardContainer" style={mode ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" }} >
         <Card.Img variant="top" src={url?.small} />
-        <img id='downloadBtnStyle' src={downloadIcon} alt='download'  onClick={handleDownloadClick} />
+        <img id='downloadBtnStyle' src={downloadIcon} alt='download' onClick={handleDownloadClick} />
         <Card.Body>
 
           <div className="bar" >

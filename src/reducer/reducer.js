@@ -10,8 +10,8 @@ const intialize = {
   NavFlag: false,
   IsDataAvilable: false,
   collectionData: [],
-  collectionPhoto:[],
-  aboutPhoto:[],
+  collectionPhoto: [],
+  aboutPhoto: [],
 
 
 }
@@ -95,27 +95,28 @@ export default function reducer(state = intialize, action) {
       }
     }
 
-  case 'IntializeCollectionPhotos':{
-   return{ ...state,
-    collectionPhoto: action.payload.photos,
-  }
-  }
-
-  case 'GetCollectionPhotos': {
-    return {
-      ...state,
-      collectionPhoto: [ ...action.payload,...state.collectionPhoto],
+    case 'IntializeCollectionPhotos': {
+      return {
+        ...state,
+        collectionPhoto: action.payload.photos,
+      }
     }
-  }
 
-  case 'SetAboutPhoto':{
-   const filterData=action.payload.map((item)=>item.urls.small)
-   console.log("ph",filterData)
-    return{
-      ...state,
-      aboutPhoto:filterData,
+    case 'GetCollectionPhotos': {
+      return {
+        ...state,
+        collectionPhoto: [...action.payload, ...state.collectionPhoto],
+      }
     }
-  }
+
+    case 'SetAboutPhoto': {
+      const filterData = action.payload.map((item) => item.urls.small)
+
+      return {
+        ...state,
+        aboutPhoto: filterData,
+      }
+    }
     default:
       return state;
   }

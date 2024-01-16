@@ -15,20 +15,20 @@ const handleLinkedInClick = () => {
 
 
 function Footer() {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
-  const IsDataAvilable=useSelector((state=>state.IsDataAvilable));
-console.log(IsDataAvilable);
+  const IsDataAvilable = useSelector((state => state.IsDataAvilable));
+
   const mode = useSelector((state) => state.mode);
 
-  if(IsDataAvilable) return (
+  if (IsDataAvilable) return (
     <>
-      {console.log("Footercall")}
-      <div className='FooterDiv'  style={!mode?{backgroundColor:"black"}:{}}>
+
+      <div className='FooterDiv' style={!mode ? { backgroundColor: "black" } : {}}>
         <div className='InnerDiv'>
-          <img className="footerIcon" src={gmail} alt=' ' onClick={()=>navigate("/contactUs")}/>
+          <img className="footerIcon" src={gmail} alt=' ' onClick={() => navigate("/contactUs")} />
           <img className="footerIcon" src={facebook} alt=' ' />
-          <img className="footerIcon" src={linkedIn} alt=' ' onClick={handleLinkedInClick}/>
+          <img className="footerIcon" src={linkedIn} alt=' ' onClick={handleLinkedInClick} />
         </div>
 
         <div className='EleDiv' >
@@ -36,7 +36,7 @@ console.log(IsDataAvilable);
           <p className='MoveIcon'>Image Gallery</p>
           <p className='footerText nameMoveIcon'>developed by Ankit Gupta</p>
           <p className='footerCR'>copyright &copy;{new Date().getFullYear()} </p>
-          
+
 
         </div>
 
@@ -44,8 +44,8 @@ console.log(IsDataAvilable);
     </>
   )
 
-  else{
-    return(<></>)
+  else {
+    return (<></>)
   }
 }
 

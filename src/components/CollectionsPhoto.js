@@ -13,8 +13,7 @@ function CollectionsPhoto() {
  const data=useSelector((state)=>state.collectionPhoto);
 const {id,totalPhotos}=useParams();
 
-// console.log(id);
-// console.table(data);
+
 const [page, setpage] = useState(1);
 
   useEffect(()=>{
@@ -44,7 +43,7 @@ const [page, setpage] = useState(1);
           </p>
         }
       >
-      {console.log(page)}
+  
       <div className='container-no-margin m-auto card-conatiner text-center'  >
           {
             data.map((ele, index) => {
