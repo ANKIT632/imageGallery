@@ -18,7 +18,6 @@ import searchIcon1 from '../image/search1.png'
 function NAVBAR() {
     const dispatch = useDispatch();
     const mode = useSelector((state) => state.mode);
-    const blur = useSelector((state) => state.showPop);
     const NavFlag = useSelector((state) => state.NavFlag);
     const navigate=useNavigate();
 
