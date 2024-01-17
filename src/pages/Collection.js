@@ -37,7 +37,7 @@ export default function Collection() {
     <div className='Collection'>
 
       <div className='TitleCollectionsContainer'>
-        <h4>Gallery Collections</h4>
+        <p id='Coll_Banner'>Gallery Collections</p>
         <p>Explore Daily new collections</p>
       </div>
 

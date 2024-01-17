@@ -7,6 +7,8 @@
 
 }
 
+
+
 #navSearchActive {
     background-color: rgb(117, 115, 115);
     color: white;
@@ -159,10 +161,14 @@
     }
 
 
-
-
-
+    #basic-navbar-nav{
+    border-bottom: 1.5px solid rgb(50, 50, 50);
+    border-radius: 20px;
+    }
 }
+
+
+
 
 @media (max-width:774px) {
     .NavSearchClass {

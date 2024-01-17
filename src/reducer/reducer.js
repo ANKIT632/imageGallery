@@ -80,22 +80,29 @@ export default function reducer(state = intialize, action) {
     }
 
     case "IntializeCollection": {
+      
+      let data=action.payload.filter((item) =>item.user.name!=="Unsplash+ Collections");
+      
       return {
         ...state,
         total_page: 12,
-        collectionData: action.payload,
+        collectionData: data,
 
       }
     }
 
     case 'GetCollectionData': {
+
+      let data=action.payload.filter((item) =>item.user.name!=="Unsplash+ Collections");
+
       return {
         ...state,
-        collectionData: [...state.collectionData, ...action.payload],
+        collectionData: [...state.collectionData, ...data],
       }
     }
 
     case 'IntializeCollectionPhotos': {
+      
       return {
         ...state,
         collectionPhoto: action.payload.photos,

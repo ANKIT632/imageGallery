@@ -59,10 +59,12 @@ function NAVBAR() {
 
 
                     <img className='searchIcon' src={searchIcon1} alt='search' onClick={toggleNav} />
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: "white" }} />
 
-                    <Navbar.Collapse id="basic-navbar-nav" style={mode ? { backgroundColor: "white", width: "0px", color: "#1d1c1c" } : { backgroundColor: "#1d1c1c", color: "white", width: "0px" }}>
-                        <Nav className="me-auto" id={blur ? "setPointer" : " "} >
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ background: "white" ,height:"34px" ,width:'40px' , boxShadow:"0px 1px 1px grey"}} />
+
+                    <Navbar.Collapse id="basic-navbar-nav" style={mode ? { backgroundColor: "white", color: "#1d1c1c", } : { backgroundColor: "#1d1c1c", color: "white" ,}}>
+
+                        <Nav className="me-auto">
                             <Link to="/Collection" className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>Collection</Link>
                             <Link to="/aboutUs" className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>AboutUs</Link>
                             <Link to='/ContactUs' className='NavEl' style={mode ? { color: "#1d1c1c" } : { color: "white" }}>ContactUs</Link>

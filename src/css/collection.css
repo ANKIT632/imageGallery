@@ -1,5 +1,5 @@
 .TitleCollectionsContainer {
-    width: 100%;
+    width: 96%;
     height: 22%;
     background: linear-gradient(to left, #B4BDFF, #7ED7C1);
     display: flex;
@@ -7,13 +7,28 @@
     justify-content: center;
     align-items: center;
     font-weight: 700;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-bottom: 2px solid gray;
+    font-family:sans-serif;
+
     font-size: 16px;
-    margin-bottom: 10px;
+   
     padding-top: 6px;
     padding-bottom: 6px;
+
+    border-radius: 20px;
+    box-shadow: 1px 2px 10px grey;
+    border: 2px solid white;
+    
+    margin: 5px;
+    margin-bottom: 15px;
 }
+
+#Coll_Banner{
+    margin: 0;
+    font-size: 22px;  
+    font-family: Trebuchet MS ;  
+    font-weight: 900;
+}
+
 
 .TitleCollectionsContainer p,h4{
     margin: 0;
