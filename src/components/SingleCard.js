@@ -81,7 +81,8 @@ function SingleCard(props) {
 
   const handlerRemoveFav = () => {
     localStorage.removeItem(id);
-    props.localDataLength(localStorage.length);
+    if (props?.localDataLength)
+      props.localDataLength(localStorage.length);
     setMark(false);
   }
 
