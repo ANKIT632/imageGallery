@@ -50,6 +50,7 @@ const [page, setpage] = useState(1);
               return (
                 <div className='cardx' key={ele.id + index}> 
                   <SingleCard
+                    id={ele.id}
                     name={ele?.user?.name.trim()}
                     likes={ele?.likes}
                     social={ele?.user?.social}

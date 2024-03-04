@@ -11,6 +11,7 @@ import { useSelector } from "react-redux";
 
 import ContactUs from "./pages/contactUs";
 import CollectionsPhoto from "./components/CollectionsPhoto";
+import FavCollection from './pages/FavCollection'
 
 function App() {
   const mode = useSelector((state => state.mode))
@@ -27,7 +28,7 @@ function App() {
           <Route path="/CollectionsPhoto/:id/:totalPhotos" element={<CollectionsPhoto />} />
           <Route path="/Explore" element={<Explore />} />
           <Route path="/contactUs" element={<ContactUs />} />
-
+          <Route path="/favCollection" element={<FavCollection />} />
         </Routes>
       </Router>
     </div>

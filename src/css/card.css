@@ -1,18 +1,20 @@
 .cardx {
   break-inside: avoid-column;
   padding-bottom: 12px;
+  margin: -4px;
+  margin-top: 3px;
 }
 
 .card-conatiner {
   padding: 1rem;
   columns: 4;
   overflow: hidden;
+  position: absol
+  ;
 
 }
 
 .cardBtn {
-  position: relative;
-  left: 50%;
   margin-bottom: 10px;
 }
 
@@ -30,19 +32,31 @@
 
 /* For screens with a max-width of 768px (typical tablet size) */
 
+@media (max-width: 1265px) {
+  .cardx {
+ 
+    margin: -5px;
+   
+  }
+  .singleCardContainer {
+    /* place-self: flex-start; */
+  width: 18.5rem;
+
+  }
+}
 
 @media (max-width: 1236px) {
 
   /* CSS styles for tablets */
   .card-conatiner {
-
+    margin:0px;
     columns: 3;
 
   }
 
   .singleCardContainer {
     /* place-self: flex-start; */
-    width: 23rem;
+   width: 23rem;
 
   }
 
@@ -163,11 +177,6 @@
 
   }
 
-  .cardBtn {
-    position: relative;
-    left: 39%;
-    margin-bottom: 10px;
-  }
 
 }
 
@@ -197,13 +206,3 @@
   }
 
 } 
-
-
-/* @media (max-width: 303px) {
-  .singleCardContainer {
-    /* place-self: flex-start; */
-    /* width: 15rem; */
-
-  /* }
-
-} */ 

@@ -62,14 +62,15 @@ function Card() {
 
 
     return (
-      <>
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignContent: 'center', alignItems: 'center', padding: '0px', margin: '0px' }}>
 
-        <div className='container-no-margin m-auto card-conatiner text-center'  >
+        <div className='container-no-margin m-auto card-conatiner text-center'   >
           {
             data.map((ele, index) => {
               return (
                 <div className='cardx' key={ele.id + index}>
                   <SingleCard
+                    id={ele.id}
                     name={ele?.user?.name.trim()}
                     likes={ele?.likes}
                     social={ele?.user?.social}
@@ -84,12 +85,13 @@ function Card() {
 
         </div>
 
-        {data.length ? <button className={show ? 'btnStyle cardBtn' : "cardBtn"} disabled={!show} onClick={moreDataResult} >{show ? "Load More" : "No more"}</button> : <div className='ImageNotAvilableContainer'><img className="ImageNotAvilable" src={NotAvilableImage} alt="Not avilable Img" /><button className='btnStyle' style={{ marginBottom: "10px" }} onClick={HandleEmptyPageBtn}>Go Back</button></div>}
+        {data.length ? <button className={show ? 'btnStyle cardBtn' : "cardBtn"} disabled={!show} onClick={moreDataResult} >{show ? "Load More" : "No more"}</button> : <div className='ImageNotAvilableContainer'><img className="ImageNotAvilable" src={NotAvilableImage} alt="Not avilable Img" />
+          <button className='btnStyle' style={{ marginBottom: "10px" }} onClick={HandleEmptyPageBtn}>Go Back</button></div>}
 
 
         <Footer />
 
-      </>
+      </div>
 
     );
   }

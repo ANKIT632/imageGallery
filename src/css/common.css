@@ -30,14 +30,7 @@
 
 .btnStyle:active {
     background-color: rgb(35, 138, 241);
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: medium;
-    font-family: monospace;
+
     position: relative;
 
 

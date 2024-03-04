@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import Card from 'react-bootstrap/Card';
 import Image from 'react-bootstrap/Image';
@@ -5,12 +6,15 @@ import Col from 'react-bootstrap/Col';
 import { AiOutlineLike } from 'react-icons/ai';
 import '../css/singleCard.css';
 import { useSelector } from 'react-redux';
-import { memo } from 'react';
+import { memo, useEffect, useState } from 'react';
+import star from '../icons/star.png';
+import emptyStar from '../icons/starEmp.png'
 
 import downloadIcon from '../image/downloadIcon.png'
 
 function SingleCard(props) {
   const {
+    id,
     name,
     likes,
     social,
@@ -20,6 +24,8 @@ function SingleCard(props) {
 
   } = props;
 
+
+  let [mark, setMark] = useState(false);
 
   const mode = useSelector((state) => state.mode);
 
@@ -46,11 +52,48 @@ function SingleCard(props) {
       });
   };
 
+
+
+  useEffect(() => {
+    if (localStorage.getItem(id)) {
+      setMark(true);
+    }
+  }, [])
+
+  // add star
+  const handlerAddFav = () => {
+    const data = {
+      id: id,
+      name: name,
+      likes: likes,
+      social: social,
+      img: img,
+      url: url,
+      downloadUrl: downloadUrl,
+    };
+
+    localStorage.setItem(id, JSON.stringify(data));
+    setMark(true);
+
+  }
+
+  // remove fav
+
+  const handlerRemoveFav = () => {
+    localStorage.removeItem(id);
+    props.localDataLength(localStorage.length);
+    setMark(false);
+  }
+
+
   return (
     <>
 
       <Card className="singleCardContainer" style={mode ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" }} >
         <Card.Img variant="top" src={url?.small} />
+
+        {mark ? <img className='favStar' src={star} alt='star' onClick={handlerRemoveFav} /> : <img className='favStar' src={emptyStar} alt='star' onClick={handlerAddFav} />}
+
         <img id='downloadBtnStyle' src={downloadIcon} alt='download' onClick={handleDownloadClick} />
         <Card.Body>
 

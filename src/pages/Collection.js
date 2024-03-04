@@ -7,6 +7,7 @@ import { getCollectionData, IntializeCollectionData } from '../action/action'
 import '../css/collection.css';
 import InfiniteScroll from 'react-infinite-scroll-component'
 import loader from '../gif/loader.gif'
+import Banner from '../components/Banner'
 
 
 export default function Collection() {
@@ -36,17 +37,14 @@ export default function Collection() {
   return (
     <div className='Collection'>
 
-      <div className='TitleCollectionsContainer'>
-        <p id='Coll_Banner'>Gallery Collections</p>
-        <p>Explore Daily new collections</p>
-      </div>
 
+      <Banner title='Gallery Collections' des='Explore Daily new collections' />
       <InfiniteScroll
         dataLength={collectionData.length} // Use the actual length of data (here add current data length)
         next={() => setpage(page + 1)}
         hasMore={page <= total_page}
-        loader={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom:'1.5rem'  }}>
-          <img style={{height:"3rem"}} src={loader} alt='loading...' />
+        loader={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem' }}>
+          <img style={{ height: "3rem" }} src={loader} alt='loading...' />
         </div>}
         endMessage={
           <p style={{ textAlign: 'center', color: "skyblue" }}>
@@ -76,7 +74,7 @@ export default function Collection() {
         </div>
 
       </InfiniteScroll>
-      <button className="btnStyle" style={{marginBottom:"10px"}} onClick={handleRedirect}>Go To Home</button>
+      <button className="btnStyle" style={{ marginBottom: "10px" }} onClick={handleRedirect}>Go To Home</button>
     </div>
   )
 }

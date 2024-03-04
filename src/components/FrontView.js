@@ -4,6 +4,7 @@ import { useEffect,useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchUpdateData } from '../action/action';
 
+
 export default function FrontView() {
 
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 788);
@@ -42,7 +43,7 @@ export default function FrontView() {
 
   return (
     <div className={blur?'containerX setBackground':'containerX'}>
-
+  
       <h3 id="FrontHead">Download High Quality Images by creators</h3>
       <p id='frontp'>Over 2.4 million+ stock Images by our talented community</p>  
       <input id="FrontSearchBar" type='text' placeholder={placeholderText} style={!mode?{backgroundColor:"rgb(60, 59, 59)"}:{}}  onKeyUpCapture={update}/>

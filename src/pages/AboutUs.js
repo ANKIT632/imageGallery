@@ -11,8 +11,6 @@ export default function Community() {
 
   const dispatch = useDispatch();
 
-
-
   useEffect(() => {
     dispatch(getAboutPhoto());
 
