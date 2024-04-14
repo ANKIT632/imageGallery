@@ -50,8 +50,9 @@ const [page, setpage] = useState(1);
           {
             data.map((ele, index) => {
               return (
+                <React.Suspense fallback={<div className='cardx' style={{backgroundColor:'gray'}}></div>}>
                 <div className='cardx' key={ele.id + index}> 
-                <React.Suspense fallback={<div></div>}>
+               
                   <SingleCard
                     id={ele.id}
                     name={ele?.user?.name.trim()}
@@ -61,8 +62,9 @@ const [page, setpage] = useState(1);
                     url={ele?.urls}
                     downloadUrl={ele?.urls?.full}
                   />
-                  </React.Suspense>
+          
                 </div>
+                </React.Suspense>
               )
             })
           }
