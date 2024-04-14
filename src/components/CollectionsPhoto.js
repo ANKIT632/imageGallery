@@ -1,11 +1,13 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import  { useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import {getCollectionPhotos,IntializeCollectionPhotos} from '../action/action'
 import { useDispatch,useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'; 
-import SingleCard from './SingleCard';
+
 import InfiniteScroll from 'react-infinite-scroll-component'
 import loader from '../gif/loader.gif'
+
+const SingleCard=React.lazy(()=>import('./SingleCard'));
 
 
 function CollectionsPhoto() {
@@ -49,6 +51,7 @@ const [page, setpage] = useState(1);
             data.map((ele, index) => {
               return (
                 <div className='cardx' key={ele.id + index}> 
+                <React.Suspense fallback={<div></div>}>
                   <SingleCard
                     id={ele.id}
                     name={ele?.user?.name.trim()}
@@ -58,6 +61,7 @@ const [page, setpage] = useState(1);
                     url={ele?.urls}
                     downloadUrl={ele?.urls?.full}
                   />
+                  </React.Suspense>
                 </div>
               )
             })

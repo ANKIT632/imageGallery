@@ -1,7 +1,7 @@
 import React from 'react'
 import Banner from '../components/Banner';
 import { useEffect, useState } from 'react';
-import SingleCard from '../components/SingleCard';
+const SingleCard=React.lazy(()=>import('../components/SingleCard'));
 
 function FavImaList() {
   const [data, setData] = useState(null);
@@ -48,6 +48,8 @@ function FavImaList() {
             return (
 
               <div className='cardx' key={ele.id + index}>
+
+              <React.Suspense fallback={<div></div>}>
                 <SingleCard
 
                   id={ele.id}
@@ -59,8 +61,10 @@ function FavImaList() {
                   downloadUrl={ele?.downloadUrl}
                   localDataLength={setLoaclDataLen}
                 />
+                  </React.Suspense>
               </div>
-
+            
+          
 
             )
           })

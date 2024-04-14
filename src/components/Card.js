@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import SingleCard from './SingleCard';
 import { getData, moreData, searchUpdateData } from '../action/action';
 import { useDispatch, useSelector } from 'react-redux';
 import '../css/card.css';
@@ -7,6 +6,7 @@ import Load from './Load';
 import NotAvilableImage from '../image/no-image.png'
 import Footer from "./Footer";
 
+const SingleCard=React.lazy(()=>import('./SingleCard'));
 
 function Card() {
 
@@ -69,6 +69,7 @@ function Card() {
             data.map((ele, index) => {
               return (
                 <div className='cardx' key={ele.id + index}>
+                <React.Suspense fallback={<div></div>}>
                   <SingleCard
                     id={ele.id}
                     name={ele?.user?.name.trim()}
@@ -78,7 +79,10 @@ function Card() {
                     url={ele?.urls}
                     downloadUrl={ele?.urls?.full}
                   />
+
+          </React.Suspense> 
                 </div>
+                
               )
             })
           }
