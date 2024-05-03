@@ -18,7 +18,7 @@ export default function Home() {
   return (
 
     <div id='Home' style={mode ? { backgroundColor: "white", } : { backgroundColor: "#1d1c1c", }}>
-      <div style={{ position: 'absolute', backgroundColor: 'black', width: '40px', height: '40px', alignItems: 'center', display: 'flex', justifyContent: 'center', border: '1px solid black', borderRadius: '30%', left: "4%", marginTop: '15px', boxShadow: '0px 0px 5px 2px white', cursor: 'pointer' }}>
+      <div style={{ position: 'fixed', backgroundColor: 'black', width: '40px', height: '40px', alignItems: 'center', display: 'flex', justifyContent: 'center', border: '1px solid black', borderRadius: '30%', right: "1%", marginTop: '15px', boxShadow: '0px 0px 5px 2px white', cursor: 'pointer',zIndex:"50" }}>
         <img src={AllFavIcon} alt='icon' style=
           {{ width: '20px' }} onClick={handleFav} />
       </div>

@@ -110,7 +110,7 @@
 
 @media (max-width: 687px) {
   #popImg {
-        width: 100%;
+    width: 100%;
     height: 384px;
   }
 
@@ -145,7 +145,7 @@
 @media (max-width: 332px) {
   #popImg {
     width: 18rem;
-    height: 330spx;
+    height: 330px;
   }
 
 }

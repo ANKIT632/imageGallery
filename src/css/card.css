@@ -146,7 +146,7 @@
 
   .singleCardContainer {
     /* place-self: flex-start; */
-    width: 17rem;
+    width: 16rem !important;
 
   }
 
@@ -156,7 +156,7 @@
 
   .singleCardContainer {
     /* place-self: flex-start; */
-    width: 15rem;
+    width: 15rem !important;
 
   }
 
@@ -167,13 +167,14 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+   
 
 
   }
 
   .singleCardContainer {
     /* place-self: flex-start; */
-    width: 28rem;
+    width: 100% !important;
     margin-bottom:5px;
 
   }
@@ -184,16 +185,16 @@
 @media (max-width: 463px) {
   .singleCardContainer {
     /* place-self: flex-start; */
-    width: 25rem;
+    width: 100% !important;
 
   }
 
 }
-
+/* 
 @media (max-width: 416px) {
   .singleCardContainer {
     /* place-self: flex-start; */
-    width: 22rem;
+    /* width: 22rem;
 
   }
 
@@ -206,4 +207,4 @@
 
   }
 
-} 
+}  */ 

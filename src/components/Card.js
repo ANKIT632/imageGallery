@@ -70,7 +70,6 @@ function Card() {
               return (
                
                 <div className='cardx' key={ele.id + index}>
-              
                   <SingleCard
                     id={ele.id}
                     name={ele?.user?.name.trim()}
@@ -80,8 +79,6 @@ function Card() {
                     url={ele?.urls}
                     downloadUrl={ele?.urls?.full}
                   />
-
-    
                 </div>
             
                 
