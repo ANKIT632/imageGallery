@@ -75,7 +75,7 @@ function Card() {
                     name={ele?.user?.name.trim()}
                     likes={ele?.likes}
                     social={ele?.user?.social}
-                    img={ele?.user?.profile_image?.large}
+                    img={ele?.user?.profile_image?.small}
                     url={ele?.urls}
                     downloadUrl={ele?.urls?.full}
                   />
