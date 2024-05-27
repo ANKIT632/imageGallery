@@ -91,7 +91,7 @@ function SingleCard(props) {
     <>
 
       <Card className="singleCardContainer" style={mode ? { backgroundColor: "white", color: "black" } : { backgroundColor: "black", color: "white" }} >
-        <Card.Img variant="top" src={url?.small} />
+        <Card.Img variant="top"  src={url?.small}  loading="lazy"  />
 
         {mark ? <img className='favStar' src={star} alt='star' onClick={handlerRemoveFav} /> : <img className='favStar' src={emptyStar} alt='star' onClick={handlerAddFav} />}
 
